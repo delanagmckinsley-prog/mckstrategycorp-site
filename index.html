@@ -4,88 +4,149 @@
   <meta charset="UTF-8" />
   <title>MCK Strategy Corporation | People & Culture Consulting</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="MCK Strategy Corporation helps organizations elevate people, performance and results through workforce enablement, leadership development, and organizational transformation." />
+  <meta name="description" content="MCK Strategy Corporation elevates people, performance and results through workforce enablement, organizational optimization, and transformation & change." />
   <meta name="robots" content="index,follow" />
 
-  <!-- Open Graph (social sharing preview) -->
+  <!-- Open Graph -->
   <meta property="og:title" content="MCK Strategy Corporation | People & Culture Consulting" />
   <meta property="og:description" content="Elevating people, performance and results through workforce enablement, optimization, and transformation." />
   <meta property="og:type" content="website" />
 
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@piconav img{ height:80px; width:auto; border-radius:0; }/pico@1/nav img{ height:80px; width:auto; border-radius:0; }/pico.min.nav img{ height:80px; width:auto; border-radius:0; }" />
+  <!-- Favicon (uses your logo) -->
+  <link rel="icon" href="logo.png" />
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css" />
 
   <style>
-    :root { --primary:#0b3d91; }
-    body { background:#f6f8fb; }
-
-    nav { background:#fff; border-bottom:1px solid #e5e7eb; }
-    .logo-img { height: 52px; width: auto; border-radius: 0; display:block; }
-
-    /* Prevent “skinny columns” + letter wrapping */
-    .grid { gap: 1.5rem; }
-    .grid > * { min-width: 0; }
-
-    /* Stable, explicit layouts */
-    .hero-grid{
-      display:grid;
-      grid-template-columns: 1.15fr 0.85fr;
-      gap: 2rem;
-      align-items:center;
-      padding: 3.5rem 0 2.5rem;
+    :root {
+      --brand: #0b3d91;
+      --ink: #0b1220;
+      --muted: #475569;
+      --bg: #f6f8fb;
+      --card: #ffffff;
+      --line: #e5e7eb;
+      --shadow: 0 14px 32px rgba(2, 6, 23, 0.08);
+      --radius: 16px;
     }
 
-    .services-grid{
-      display:grid;
-      grid-template-columns: repeat(3, minmax(260px, 1fr));
-      gap: 1.5rem;
+    body { background: var(--bg); color: var(--ink); }
+
+    /* NAV */
+    nav {
+      background: #fff;
+      border-bottom: 1px solid var(--line);
+      padding: 14px 40px;
+    }
+    nav ul { align-items: center; }
+    .brand-logo {
+      height: 90px;
+      width: auto;
+      border-radius: 0;
+      display: block;
+    }
+
+    /* TYPOGRAPHY */
+    h1 { font-size: clamp(2rem, 3.2vw, 3rem); line-height: 1.1; margin: 0 0 .75rem; }
+    h2, h3 { color: var(--brand); }
+    .kicker {
+      display: inline-block;
+      font-size: .85rem;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      color: #64748b;
+      margin-bottom: .9rem;
+    }
+    .lead { font-size: 1.15rem; color: var(--muted); margin: 0 0 1.25rem; }
+
+    /* LAYOUT */
+    main.container { padding-top: 0; }
+    .section { padding: 4.25rem 0; }
+
+    /* HERO */
+    .hero {
+      padding: 120px 0 90px;
+    }
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 2.25rem;
+      align-items: center;
+    }
+    .hero-cta {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+      align-items: center;
       margin-top: 1.25rem;
     }
 
-    .about-grid{
-      display:grid;
-      grid-template-columns: 0.95fr 1.05fr;
-      gap: 2rem;
-      align-items:center;
+    /* IMAGES */
+    img {
+      max-width: 100%;
+      height: auto;
+      border-radius: var(--radius);
+      display: block;
     }
 
-    @media (max-width: 900px){
-      .hero-grid, .about-grid { grid-template-columns: 1fr; }
-      .services-grid { grid-template-columns: 1fr; }
-      .hero-grid { padding: 2.5rem 0 1.75rem; }
+    /* CARDS */
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(260px, 1fr));
+      gap: 1.5rem;
+      margin-top: 1.5rem;
     }
-
-    h1 { font-size: clamp(2rem, 3vw, 2.75rem); margin-bottom: .5rem; }
-    h2, h3 { color: var(--primary); }
-    .lead { font-size: 1.15rem; color:#475569; }
-
-    figure { margin: 0; }
-    img { width: 100%; height: auto; border-radius: 14px; display:block; }
-
-    .section { padding: 3.5rem 0; }
-
-    .card{
-      background:#fff;
-      border:1px solid #eef2f7;
-      border-radius: 14px;
+    .card {
+      background: var(--card);
+      border: 1px solid #eef2f7;
+      border-radius: var(--radius);
       padding: 1.5rem;
-      box-shadow: 0 10px 25px rgba(2, 6, 23, .06);
+      box-shadow: var(--shadow);
     }
-    .card img{ border-radius: 12px; margin-bottom: 1rem; }
+    .card img { border-radius: 12px; margin-bottom: 1rem; }
+    .card p { color: var(--muted); }
 
-    .kicker{
-      display:inline-block;
-      font-size:.85rem;
-      letter-spacing:.08em;
-      text-transform:uppercase;
-      color:#64748b;
-      margin-bottom:.75rem;
+    /* ABOUT */
+    .about-grid {
+      display: grid;
+      grid-template-columns: 0.95fr 1.05fr;
+      gap: 2.25rem;
+      align-items: center;
+    }
+    .pill-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+      margin-top: 1.25rem;
+    }
+    .pill {
+      background: #fff;
+      border: 1px solid #eef2f7;
+      border-radius: 14px;
+      padding: 1.1rem 1.1rem;
+      box-shadow: 0 10px 24px rgba(2, 6, 23, 0.05);
+    }
+    .pill h3 { margin-top: 0; font-size: 1.05rem; }
+
+    /* CONTACT */
+    #contact .card { box-shadow: 0 18px 44px rgba(2, 6, 23, 0.10); }
+    form.grid { gap: 1rem; }
+
+    /* FOOTER */
+    footer {
+      padding: 2.75rem 0;
+      text-align: center;
+      color: #64748b;
     }
 
-    footer{ padding: 2.5rem 0; text-align:center; color:#64748b; }
-    .muted{ color:#64748b; }
-
-    /* Subtle divider */
-    .divider{ height:1px; background:#e9eef6; margin: 1.75rem 0; }
+    /* RESPONSIVE */
+    @media (max-width: 980px) {
+      nav { padding: 12px 18px; }
+      .brand-logo { height: 72px; }
+      .hero { padding: 70px 0 55px; }
+      .hero-grid, .about-grid { grid-template-columns: 1fr; }
+      .cards { grid-template-columns: 1fr; }
+      .pill-grid { grid-template-columns: 1fr; }
+    }
   </style>
 </head>
 
@@ -94,7 +155,7 @@
     <ul>
       <li>
         <strong>
-          <img src="logo.png" alt="MCK Strategy Logo" style="height:80px; width:auto;">
+          <img class="brand-logo" src="logo.png" alt="MCK Strategy Corporation Logo" />
         </strong>
       </li>
     </ul>
@@ -106,47 +167,46 @@
   </nav>
 
   <main class="container">
-    <section class="hero-grid">
-      <div>
-        <span class="kicker">People & Culture Consulting</span>
-        <h1>Elevating People, Performance and Results</h1>
-        <p class="lead">
-          Strategic consulting for organizations seeking to enable talent, optimize workforce performance,
-          and lead transformation with confidence.
-        </p>
-        <div class="grid">
-          <a href="#contact" role="button">Schedule a Consultation</a>
-          <a href="#services" class="secondary">Explore Services</a>
+    <section class="hero">
+      <div class="hero-grid">
+        <div>
+          <span class="kicker">People &amp; Culture Consulting</span>
+          <h1>Elevating People, Performance and Results</h1>
+          <p class="lead">
+            Strategic consulting for organizations seeking to enable talent, optimize workforce performance,
+            and lead transformation with confidence.
+          </p>
+
+          <div class="hero-cta">
+            <a href="#contact" role="button">Schedule a Consultation</a>
+            <a href="#services" class="secondary">Explore Services</a>
+          </div>
+
+          <p style="margin-top:1.25rem; color:#64748b;">
+            Specializing in workforce enablement, optimization, transformation and change.
+          </p>
         </div>
 
-        <div class="divider"></div>
-
-        <p class="muted" style="margin:0;">
-          Specializing in workforce enablement, optimization, transformation and change.
-        </p>
+        <figure style="margin:0;">
+          <img src="MCG main site picture.jpg" alt="Consulting strategy session" />
+        </figure>
       </div>
-
-      <figure>
-        <img src="MCG main site picture.jpg" alt="Consulting strategy session" />
-      </figure>
     </section>
   </main>
 
   <section id="services" class="section">
     <div class="container">
       <h2>Consulting Services</h2>
-      <p class="lead">Practical, executive-ready support that aligns people strategy with business outcomes.</p>
+      <p class="lead">Executive-ready support that aligns people strategy with business outcomes.</p>
 
-      <div class="services-grid">
+      <div class="cards">
         <article class="card">
           <img src="image digital laptop.webp" alt="Workforce enablement" />
           <h3>Workforce Enablement</h3>
-          <p>
-            Leadership development, talent alignment, and performance frameworks that help teams deliver at scale.
-          </p>
+          <p>Leadership development, talent alignment, and performance frameworks that help teams deliver at scale.</p>
           <ul>
-            <li>Capability & leadership enablement</li>
-            <li>Performance & engagement systems</li>
+            <li>Capability &amp; leadership enablement</li>
+            <li>Performance &amp; engagement systems</li>
             <li>Talent strategy and alignment</li>
           </ul>
         </article>
@@ -154,25 +214,21 @@
         <article class="card">
           <img src="image data.webp" alt="Organizational optimization" />
           <h3>Organizational Optimization</h3>
-          <p>
-            Workforce planning, operating model improvements, and performance systems that drive measurable impact.
-          </p>
+          <p>Workforce planning, operating model improvements, and performance systems that drive measurable impact.</p>
           <ul>
-            <li>Workforce planning & optimization</li>
+            <li>Workforce planning &amp; optimization</li>
             <li>Operating model design</li>
-            <li>Metrics & decision support</li>
+            <li>Metrics &amp; decision support</li>
           </ul>
         </article>
 
         <article class="card">
           <img src="image ideas.webp" alt="Transformation and change" />
-          <h3>Transformation & Change</h3>
-          <p>
-            Change strategy, culture transformation, and workforce evolution designed for sustainable results.
-          </p>
+          <h3>Transformation &amp; Change</h3>
+          <p>Change strategy, culture transformation, and workforce evolution designed for sustainable results.</p>
           <ul>
             <li>Change management strategy</li>
-            <li>Culture & adoption programs</li>
+            <li>Culture &amp; adoption programs</li>
             <li>Transformation roadmaps</li>
           </ul>
         </article>
@@ -183,38 +239,36 @@
   <section id="about" class="section">
     <div class="container">
       <div class="about-grid">
-        <figure>
+        <figure style="margin:0;">
           <img src="image team working together.webp" alt="Leadership and team alignment" />
         </figure>
 
         <div>
           <span class="kicker">Our Approach</span>
           <h2>About MCK Strategy Corporation</h2>
-          <p>
+          <p class="lead" style="margin-bottom:.75rem;">
             We partner with leaders to align people strategy with business goals—strengthening culture,
             improving performance, and enabling transformation.
           </p>
-          <p>
+          <p style="color:var(--muted);">
             Our work is built for execution: clear roadmaps, leadership alignment, and measurable outcomes
             that support sustainable growth.
           </p>
 
-          <div class="divider"></div>
-
-          <div class="grid">
-            <div class="card" style="box-shadow:none;">
-              <h3 style="margin-top:0;">What You Can Expect</h3>
+          <div class="pill-grid">
+            <div class="pill">
+              <h3>What You Can Expect</h3>
               <ul>
                 <li>Executive-ready recommendations</li>
                 <li>Structured change planning</li>
                 <li>Clear measures of success</li>
               </ul>
             </div>
-            <div class="card" style="box-shadow:none;">
-              <h3 style="margin-top:0;">Ideal For</h3>
+            <div class="pill">
+              <h3>Ideal For</h3>
               <ul>
-                <li>Growth & transformation initiatives</li>
-                <li>HR & people operating model evolution</li>
+                <li>Growth &amp; transformation initiatives</li>
+                <li>HR &amp; people operating model evolution</li>
                 <li>Culture and engagement improvement</li>
               </ul>
             </div>
@@ -233,14 +287,14 @@
           <h3>Start a conversation about how we can support your organization.</h3>
         </hgroup>
 
-        <!-- Note: this form is visual-only until you connect email handling -->
+        <!-- Visual-only until you connect email handling -->
         <form class="grid">
           <input type="text" name="name" placeholder="Your Name" aria-label="Your Name" required />
           <input type="email" name="email" placeholder="Your Email" aria-label="Your Email" required />
           <button type="submit" onclick="event.preventDefault()">Request a Call</button>
         </form>
 
-        <p class="muted" style="margin-top:1rem;">
+        <p style="margin-top:1rem; color:#64748b;">
           Prefer email? Once your Google Workspace is ready, we can wire this form to send directly to your inbox.
         </p>
       </article>
@@ -248,9 +302,7 @@
   </section>
 
   <footer class="container">
-    <small>
-      © 2013 MCK Strategy Corporation • Strategic People &amp; Culture Consulting
-    </small>
+    <small>© 2013 MCK Strategy Corporation • Strategic People &amp; Culture Consulting</small>
   </footer>
 </body>
 </html>
