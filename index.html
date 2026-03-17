@@ -3,9 +3,59 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>MCK Strategy</title>
-  <meta name="description" content="MCK Strategy helps organizations transform people, culture, workforce strategy, and operating models for growth and resilience." />
+
+  <title>MCK Strategy &amp; Consulting | Workforce, Culture &amp; Transformation Advisory</title>
+  <meta
+    name="description"
+    content="MCK Strategy & Consulting provides executive advisory services in workforce strategy, leadership, culture transformation, organizational design, HR modernization, and enterprise change."
+  />
+  <meta
+    name="keywords"
+    content="workforce strategy consulting, people and culture consulting, organizational design, change management consulting, HR transformation, leadership consulting, Calgary consulting, Canada consulting"
+  />
+  <meta name="author" content="MCK Strategy & Consulting" />
+  <meta name="robots" content="index, follow" />
+  <meta name="theme-color" content="#0f172a" />
+
+  <!-- Open Graph / Social Sharing -->
+  <meta property="og:title" content="MCK Strategy &amp; Consulting" />
+  <meta
+    property="og:description"
+    content="Executive advisory in workforce strategy, leadership, culture, HR modernization, and enterprise transformation."
+  />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="logo.png" />
+  <meta property="og:site_name" content="MCK Strategy &amp; Consulting" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="MCK Strategy &amp; Consulting" />
+  <meta
+    name="twitter:description"
+    content="Executive advisory in workforce strategy, leadership, culture, HR modernization, and enterprise transformation."
+  />
+  <meta name="twitter:image" content="logo.png" />
+
+  <!-- Canonical -->
+  <link rel="canonical" href="https://yourwebsite.com/" />
+
+  <!-- Font -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Structured Data for Google -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "MCK Strategy & Consulting",
+    "url": "https://yourwebsite.com/",
+    "logo": "https://yourwebsite.com/logo.png",
+    "description": "Executive advisory services in workforce strategy, leadership, culture transformation, organizational design, HR modernization, and enterprise change.",
+    "sameAs": [
+      "https://www.linkedin.com/in/your-linkedin-profile"
+    ]
+  }
+  </script>
 
   <style>
     * {
@@ -23,6 +73,8 @@
       color: #111827;
       background: #ffffff;
       line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
     }
 
     a {
@@ -62,12 +114,12 @@
     .logo-wrap {
       display: flex;
       align-items: center;
-      gap: 14px;
+      gap: 16px;
       min-width: 0;
     }
 
     .logo-wrap img {
-      height: 74px;
+      height: 96px;
       width: auto;
       object-fit: contain;
     }
@@ -75,21 +127,21 @@
     .brand-text {
       display: flex;
       flex-direction: column;
-      line-height: 1.1;
+      line-height: 1.05;
     }
 
     .brand-text .name {
-      font-size: 1.15rem;
+      font-size: 1.18rem;
       font-weight: 800;
       letter-spacing: -0.02em;
       color: #111827;
     }
 
     .brand-text .tagline {
-      font-size: 0.82rem;
+      font-size: 0.84rem;
       color: #6b7280;
       font-weight: 500;
-      margin-top: 4px;
+      margin-top: 5px;
     }
 
     nav ul {
@@ -127,10 +179,13 @@
 
     /* HERO */
     .hero {
-      background: linear-gradient(120deg, #0f172a, #1e293b);
+      background:
+        linear-gradient(rgba(15, 23, 42, 0.78), rgba(30, 41, 59, 0.88)),
+        linear-gradient(120deg, #0f172a, #1e293b);
       color: #ffffff;
-      padding: 130px 20px 110px;
+      padding: 138px 20px 112px;
       text-align: center;
+      position: relative;
     }
 
     .hero-inner {
@@ -141,7 +196,7 @@
     .hero-eyebrow {
       display: inline-block;
       font-size: 0.84rem;
-      letter-spacing: 0.12em;
+      letter-spacing: 0.14em;
       text-transform: uppercase;
       font-weight: 700;
       color: rgba(255,255,255,0.78);
@@ -149,11 +204,14 @@
     }
 
     .hero h1 {
-      font-size: clamp(2.4rem, 5vw, 4.4rem);
+      font-size: clamp(2.5rem, 5vw, 4.5rem);
       font-weight: 800;
-      letter-spacing: -0.04em;
-      line-height: 1.04;
+      letter-spacing: -0.045em;
+      line-height: 1.03;
       margin-bottom: 22px;
+      max-width: 980px;
+      margin-left: auto;
+      margin-right: auto;
     }
 
     .hero p {
@@ -191,14 +249,23 @@
     }
 
     .btn-secondary {
-      border: 1px solid rgba(255,255,255,0.25);
+      border: 1px solid rgba(255,255,255,0.26);
       color: #ffffff;
-      background: rgba(255,255,255,0.04);
+      background: rgba(255,255,255,0.05);
     }
 
     .btn-secondary:hover {
       background: rgba(255,255,255,0.10);
       transform: translateY(-2px);
+    }
+
+    /* Executive separator under hero */
+    .hero-separator {
+      width: 84px;
+      height: 2px;
+      background: rgba(255,255,255,0.55);
+      margin: 34px auto 0;
+      border-radius: 999px;
     }
 
     /* SECTION GENERIC */
@@ -305,15 +372,18 @@
     }
 
     .service-icon {
-      width: 52px;
-      height: 52px;
+      width: 54px;
+      height: 54px;
       border-radius: 14px;
       display: flex;
       align-items: center;
       justify-content: center;
       background: #f3f4f6;
-      font-size: 1.4rem;
+      color: #111827;
+      font-size: 1.15rem;
+      font-weight: 800;
       margin-bottom: 18px;
+      border: 1px solid #e5e7eb;
     }
 
     .service-card h3 {
@@ -415,13 +485,13 @@
       }
 
       .hero {
-        padding: 110px 20px 90px;
+        padding: 112px 20px 92px;
       }
     }
 
     @media (max-width: 640px) {
       .logo-wrap img {
-        height: 62px;
+        height: 78px;
       }
 
       .brand-text .name {
@@ -457,14 +527,14 @@
   <header>
     <div class="container navbar">
       <div class="logo-wrap">
-        <img src="logo.png" alt="Mck Strategy & Consulting  Logo">
+        <img src="logo.png" alt="MCK Strategy & Consulting Logo">
         <div class="brand-text">
-          <span class="name">Mck Strategy & Consulting </span>
+          <span class="name">MCK Strategy &amp; Consulting</span>
           <span class="tagline">People. Culture. Workforce Transformation.</span>
         </div>
       </div>
 
-      <nav>
+      <nav aria-label="Main navigation">
         <ul>
           <li><a href="#about">About</a></li>
           <li><a href="#services">Services</a></li>
@@ -474,137 +544,141 @@
     </div>
   </header>
 
-  <section class="hero">
-    <div class="hero-inner">
-      <div class="hero-eyebrow">Strategic Advisory for Modern Organizations</div>
-      <h1>Transforming Workforce Strategy, Leadership, and Culture for Sustainable Growth</h1>
-      <p>
-        Mck Strategy & Consulting  partners with organizations to modernize people strategy, strengthen leadership capability,
-        redesign operating models, and enable change that delivers measurable business value.
-      </p>
-
-      <div class="hero-actions">
-        <a href="#services" class="btn-primary">Explore Services</a>
-        <a href="#contact" class="btn-secondary">Get in Touch</a>
-      </div>
-    </div>
-  </section>
-
-  <section id="about" class="section-divider">
-    <div class="container">
-      <div class="section-header">
-        <span class="eyebrow">About</span>
-        <h2>Executive-Level Advisory at the Intersection of Business, People, and Transformation</h2>
+  <main>
+    <section class="hero" aria-label="Hero section">
+      <div class="hero-inner">
+        <div class="hero-eyebrow">Strategic Advisory for Modern Organizations</div>
+        <h1>Transforming Workforce Strategy, Leadership, and Culture for Sustainable Growth</h1>
         <p>
-          We help organizations align workforce, leadership, and culture priorities to enterprise strategy
-          through practical, high-impact advisory services.
+          MCK Strategy &amp; Consulting partners with organizations to modernize people strategy, strengthen leadership capability,
+          redesign operating models, and enable change that delivers measurable business value.
         </p>
+
+        <div class="hero-actions">
+          <a href="#services" class="btn-primary">Explore Services</a>
+          <a href="#contact" class="btn-secondary">Get in Touch</a>
+        </div>
+
+        <div class="hero-separator"></div>
       </div>
+    </section>
 
-      <div class="about-grid">
-        <div class="about-copy">
+    <section id="about" class="section-divider">
+      <div class="container">
+        <div class="section-header">
+          <span class="eyebrow">About</span>
+          <h2>Executive-Level Advisory at the Intersection of Business, People, and Transformation</h2>
           <p>
-            Mck Strategy & Consulting  provides strategic consulting focused on people and culture transformation,
-            leadership effectiveness, organizational design, and workforce modernization.
-          </p>
-          <p>
-            We work with organizations navigating growth, change, integration, modernization, and capability-building
-            to create stronger operating models and more resilient cultures.
-          </p>
-          <p>
-            Our approach is practical, executive-minded, and outcomes-focused — helping leaders move from strategy
-            to execution with clarity, alignment, and momentum.
+            We help organizations align workforce, leadership, and culture priorities to enterprise strategy
+            through practical, high-impact advisory services.
           </p>
         </div>
 
-        <div class="about-card">
-          <h3>Core Focus Areas</h3>
-          <ul>
-            <li>Workforce Strategy & Operating Model Design</li>
-            <li>Leadership & Culture Transformation</li>
-            <li>Talent, Learning & Capability Architecture</li>
-            <li>Enterprise Change & Adoption Enablement</li>
-            <li>HR Modernization & Strategic Advisory</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </section>
+        <div class="about-grid">
+          <div class="about-copy">
+            <p>
+              MCK Strategy &amp; Consulting provides strategic consulting focused on people and culture transformation,
+              leadership effectiveness, organizational design, and workforce modernization.
+            </p>
+            <p>
+              We work with organizations navigating growth, change, integration, modernization, and capability-building
+              to create stronger operating models and more resilient cultures.
+            </p>
+            <p>
+              Our approach is practical, executive-minded, and outcomes-focused — helping leaders move from strategy
+              to execution with clarity, alignment, and momentum.
+            </p>
+          </div>
 
-  <section id="services" class="section-divider">
-    <div class="container">
-      <div class="section-header">
-        <span class="eyebrow">Services</span>
-        <h2>Consulting Services Designed for Enterprise Impact</h2>
-        <p>
-          Strategic support for organizations seeking to strengthen people systems, leadership capability,
-          and business readiness in times of transformation.
-        </p>
-      </div>
-
-      <div class="services-grid">
-        <div class="service-card">
-          <div class="service-icon">◼</div>
-          <h3>Workforce Strategy</h3>
-          <p>
-            Design workforce strategies that align talent, capability, and structure to business priorities,
-            future demand, and operational resilience.
-          </p>
-        </div>
-
-        <div class="service-card">
-          <div class="service-icon">◆</div>
-          <h3>Organizational Design</h3>
-          <p>
-            Redesign roles, structures, accountabilities, and operating models to improve clarity,
-            agility, and enterprise performance.
-          </p>
-        </div>
-
-        <div class="service-card">
-          <div class="service-icon">▲</div>
-          <h3>Leadership & Culture</h3>
-          <p>
-            Build leadership capability and cultural alignment to support growth, trust, engagement,
-            and execution through change.
-          </p>
-        </div>
-
-        <div class="service-card">
-          <div class="service-icon">●</div>
-          <h3>Change & Transformation</h3>
-          <p>
-            Lead enterprise change efforts with strong governance, stakeholder alignment, communication,
-            readiness planning, and adoption support.
-          </p>
+          <div class="about-card">
+            <h3>Core Focus Areas</h3>
+            <ul>
+              <li>Workforce Strategy &amp; Operating Model Design</li>
+              <li>Leadership &amp; Culture Transformation</li>
+              <li>Talent, Learning &amp; Capability Architecture</li>
+              <li>Enterprise Change &amp; Adoption Enablement</li>
+              <li>HR Modernization &amp; Strategic Advisory</li>
+            </ul>
+          </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <section class="cta" id="contact">
-    <div class="container">
-      <div class="cta-box">
-        <h2>Ready to Elevate Your People and Transformation Agenda?</h2>
-        <p>
-          Let’s discuss how Mck Strategy & Consulting  can support your organization with executive-level
-          advisory across workforce, culture, and change.
-        </p>
-        <a href="mailto:your@email.com" class="btn-primary">Contact Us</a>
+    <section id="services" class="section-divider">
+      <div class="container">
+        <div class="section-header">
+          <span class="eyebrow">Services</span>
+          <h2>Consulting Services Designed for Enterprise Impact</h2>
+          <p>
+            Strategic support for organizations seeking to strengthen people systems, leadership capability,
+            and business readiness in times of transformation.
+          </p>
+        </div>
+
+        <div class="services-grid">
+          <div class="service-card">
+            <div class="service-icon">01</div>
+            <h3>Workforce Strategy</h3>
+            <p>
+              Design workforce strategies that align talent, capability, and structure to business priorities,
+              future demand, and operational resilience.
+            </p>
+          </div>
+
+          <div class="service-card">
+            <div class="service-icon">02</div>
+            <h3>Organizational Design</h3>
+            <p>
+              Redesign roles, structures, accountabilities, and operating models to improve clarity,
+              agility, and enterprise performance.
+            </p>
+          </div>
+
+          <div class="service-card">
+            <div class="service-icon">03</div>
+            <h3>Leadership &amp; Culture</h3>
+            <p>
+              Build leadership capability and cultural alignment to support growth, trust, engagement,
+              and execution through change.
+            </p>
+          </div>
+
+          <div class="service-card">
+            <div class="service-icon">04</div>
+            <h3>Change &amp; Transformation</h3>
+            <p>
+              Lead enterprise change efforts with strong governance, stakeholder alignment, communication,
+              readiness planning, and adoption support.
+            </p>
+          </div>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
+
+    <section class="cta" id="contact">
+      <div class="container">
+        <div class="cta-box">
+          <h2>Ready to Elevate Your People and Transformation Agenda?</h2>
+          <p>
+            Let’s discuss how MCK Strategy &amp; Consulting can support your organization with executive-level
+            advisory across workforce, culture, and change.
+          </p>
+          <a href="mailto:your@email.com" class="btn-primary">Contact Us</a>
+        </div>
+      </div>
+    </section>
+  </main>
 
   <footer>
     <div class="container footer-inner">
       <div class="footer-left">
-        <h4>MCK Strategy </h4>
+        <h4>MCK Strategy &amp; Consulting</h4>
         <p>Strategic advisory in people, culture, workforce, and transformation.</p>
       </div>
 
       <div class="footer-right">
         <a href="mailto:your@email.com">Email</a>
-        <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <a href="https://www.linkedin.com/in/your-linkedin-profile" target="_blank" rel="noopener noreferrer">LinkedIn</a>
       </div>
     </div>
   </footer>
