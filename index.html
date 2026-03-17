@@ -24,7 +24,8 @@
     content="Executive advisory in workforce strategy, leadership, culture, HR modernization, and enterprise transformation."
   />
   <meta property="og:type" content="website" />
-  <meta property="og:image" content="logo.png" />
+  <meta property="og:url" content="https://www.mckstrategycorp.com/" />
+  <meta property="og:image" content="https://www.mckstrategycorp.com/logo.png" />
   <meta property="og:site_name" content="MCK Strategy &amp; Consulting" />
 
   <!-- Twitter -->
@@ -34,10 +35,10 @@
     name="twitter:description"
     content="Executive advisory in workforce strategy, leadership, culture, HR modernization, and enterprise transformation."
   />
-  <meta name="twitter:image" content="logo.png" />
+  <meta name="twitter:image" content="https://www.mckstrategycorp.com/logo.png" />
 
   <!-- Canonical -->
-  <link rel="canonical" href="https://yourwebsite.com/" />
+  <link rel="canonical" href="https://www.mckstrategycorp.com/" />
 
   <!-- Font -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -48,12 +49,17 @@
     "@context": "https://schema.org",
     "@type": "Organization",
     "name": "MCK Strategy & Consulting",
-    "url": "https://yourwebsite.com/",
-    "logo": "https://yourwebsite.com/logo.png",
+    "url": "https://www.mckstrategycorp.com/",
+    "logo": "https://www.mckstrategycorp.com/logo.png",
     "description": "Executive advisory services in workforce strategy, leadership, culture transformation, organizational design, HR modernization, and enterprise change.",
     "sameAs": [
-      "https://www.linkedin.com/in/your-linkedin-profile"
-    ]
+      "https://www.linkedin.com/company/mck-strategy/"
+    ],
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "email": "delana@mckstrategycorp.com",
+      "contactType": "customer service"
+    }
   }
   </script>
 
@@ -180,17 +186,41 @@
     /* HERO */
     .hero {
       background:
-        linear-gradient(rgba(15, 23, 42, 0.78), rgba(30, 41, 59, 0.88)),
-        linear-gradient(120deg, #0f172a, #1e293b);
+        linear-gradient(rgba(15, 23, 42, 0.72), rgba(15, 23, 42, 0.84)),
+        radial-gradient(circle at top, rgba(255,255,255,0.08), transparent 38%),
+        linear-gradient(120deg, #0f172a, #1e293b 55%, #334155);
       color: #ffffff;
-      padding: 138px 20px 112px;
+      padding: 142px 20px 116px;
       text-align: center;
       position: relative;
+      overflow: hidden;
+    }
+
+    /* premium consulting-firm effect */
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to right, rgba(255,255,255,0.04), transparent 18%, transparent 82%, rgba(255,255,255,0.04));
+      pointer-events: none;
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      left: 50%;
+      bottom: 0;
+      transform: translateX(-50%);
+      width: min(1200px, 92%);
+      height: 1px;
+      background: rgba(255,255,255,0.16);
     }
 
     .hero-inner {
       max-width: 980px;
       margin: 0 auto;
+      position: relative;
+      z-index: 1;
     }
 
     .hero-eyebrow {
@@ -204,7 +234,7 @@
     }
 
     .hero h1 {
-      font-size: clamp(2.5rem, 5vw, 4.5rem);
+      font-size: clamp(2.5rem, 5vw, 4.6rem);
       font-weight: 800;
       letter-spacing: -0.045em;
       line-height: 1.03;
@@ -241,6 +271,7 @@
     .btn-primary {
       background: #ffffff;
       color: #0f172a;
+      box-shadow: 0 12px 30px rgba(0,0,0,0.18);
     }
 
     .btn-primary:hover {
@@ -259,7 +290,6 @@
       transform: translateY(-2px);
     }
 
-    /* Executive separator under hero */
     .hero-separator {
       width: 84px;
       height: 2px;
@@ -663,7 +693,7 @@
             Let’s discuss how MCK Strategy &amp; Consulting can support your organization with executive-level
             advisory across workforce, culture, and change.
           </p>
-          <a href="mailto:your@email.com" class="btn-primary">Contact Us</a>
+          <a href="mailto:delana@mckstrategycorp.com" class="btn-primary">Contact Us</a>
         </div>
       </div>
     </section>
@@ -677,8 +707,8 @@
       </div>
 
       <div class="footer-right">
-        <a href="mailto:your@email.com">Email</a>
-        <a href="https://www.linkedin.com/in/your-linkedin-profile" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <a href="mailto:delana@mckstrategycorp.com">Email</a>
+        <a href="https://www.linkedin.com/company/mck-strategy/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
       </div>
     </div>
   </footer>
