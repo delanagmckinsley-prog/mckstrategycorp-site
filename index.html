@@ -2,477 +2,612 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>MCK Strategy Corporation | People & Culture Consulting</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-
-  <!-- SEO -->
-  <meta name="description" content="MCK Strategy Corporation elevates people, performance and results through workforce enablement, organizational optimization, and transformation & change." />
-  <meta name="robots" content="index,follow" />
-  <link rel="canonical" href="https://mckstrategycorp.com/" />
-
-  <!-- Social -->
-  <meta property="og:title" content="MCK Strategy Corporation | People & Culture Consulting" />
-  <meta property="og:description" content="Elevating people, performance and results through workforce enablement, optimization, and transformation." />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://mckstrategycorp.com/" />
-  <meta property="og:image" content="https://mckstrategycorp.com/MCG%20main%20site%20picture.jpg" />
-  <meta name="twitter:card" content="summary_large_image" />
-
-  <!-- Favicon -->
-  <link rel="icon" href="logo.png" />
-
-  <!-- Pico -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MCK Strategy Corp</title>
+  <meta name="description" content="MCK Strategy Corp helps organizations transform people, culture, workforce strategy, and operating models for growth and resilience." />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
   <style>
-    :root{
-      --brand:#0b3d91;
-      --brand2:#0a2e6a;
-      --gold:#c9a24a;
-      --ink:#0b1220;
-      --muted:#475569;
-      --bg:#f6f8fb;
-      --card:#ffffff;
-      --line:#e6ebf3;
-      --shadow: 0 16px 40px rgba(2,6,23,.10);
-      --shadow2: 0 10px 22px rgba(2,6,23,.08);
-      --radius: 18px;
-      --radius2: 14px;
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
     }
 
-    body{ background:var(--bg); color:var(--ink); }
-    .container{ max-width: 1120px; }
+    html {
+      scroll-behavior: smooth;
+    }
 
-    /* NAV */
-    nav{
+    body {
+      font-family: 'Inter', sans-serif;
+      color: #111827;
+      background: #ffffff;
+      line-height: 1.6;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    /* HEADER */
+    header {
       position: sticky;
       top: 0;
-      z-index: 50;
-      background: rgba(255,255,255,.88);
+      z-index: 1000;
+      background: rgba(255, 255, 255, 0.96);
       backdrop-filter: blur(10px);
-      border-bottom: 1px solid var(--line);
-      padding: 14px 22px;
+      border-bottom: 1px solid #e5e7eb;
     }
-    nav ul{ align-items:center; }
-    nav ul:first-child{ gap: 0; }
 
-    /* 🔥 LOGO FIX (works even if logo.png has tons of empty space) */
-    .logo-wrap{
-      height: 72px;            /* header logo height */
-      width: 360px;            /* give it room so text mark can show */
-      overflow: hidden;        /* crops extra transparent space */
+    .navbar {
       display: flex;
       align-items: center;
-    }
-    .logo-wrap img{
-      height: 220px;           /* make the source render larger */
-      width: auto;
-      border-radius: 0;
-      display: block;
-      transform: scale(1.35);  /* zoom in */
-      transform-origin: left center;
+      justify-content: space-between;
+      padding: 18px 0;
+      gap: 20px;
     }
 
-    .nav-links a{ color: var(--ink); opacity:.82; text-decoration:none; }
-    .nav-links a:hover{ opacity:1; color: var(--brand); }
-    .nav-links [role="button"]{ background: var(--brand); border: none; }
-    .nav-links [role="button"]:hover{ background: var(--brand2); }
-
-    /* HERO (full width banner) */
-    .hero-wrap{
-      background:
-        radial-gradient(1200px 500px at 10% 20%, rgba(11,61,145,.16), transparent 60%),
-        radial-gradient(900px 420px at 90% 10%, rgba(201,162,74,.14), transparent 55%),
-        linear-gradient(180deg, #ffffff 0%, #f3f7ff 60%, rgba(246,248,251,0) 100%);
-      border-bottom: 1px solid var(--line);
-    }
-    .hero{ padding: 92px 0 54px; }
-    .hero-grid{
-      display:grid;
-      grid-template-columns: 1.15fr .85fr;
-      gap: 44px;
-      align-items:center;
-    }
-    .kicker{
-      display:inline-flex;
-      gap:.5rem;
-      align-items:center;
-      font-size:.82rem;
-      letter-spacing:.14em;
-      text-transform: uppercase;
-      color:#64748b;
-      margin-bottom: 16px;
-    }
-    .kicker:before{
-      content:"";
-      width: 14px;
-      height: 2px;
-      background: var(--gold);
-      border-radius: 999px;
-      display:inline-block;
-    }
-    h1{
-      font-size: clamp(2.2rem, 3.4vw, 3.2rem);
-      line-height: 1.06;
-      margin: 0 0 14px;
-      letter-spacing: -0.02em;
-    }
-    .lead{
-      font-size: 1.18rem;
-      color: var(--muted);
-      margin: 0 0 22px;
-      max-width: 58ch;
-    }
-    .hero-cta{
-      display:flex;
-      flex-wrap:wrap;
+    .logo-wrap {
+      display: flex;
+      align-items: center;
       gap: 14px;
-      align-items:center;
-      margin-bottom: 18px;
-    }
-    .hero-cta a[role="button"]{ background: var(--brand); border: none; }
-    .hero-cta a[role="button"]:hover{ background: var(--brand2); }
-    .hero-cta a.secondary{
-      border: 1px solid var(--line);
-      background: #fff;
-      color: var(--ink);
-    }
-    .hero-cta a.secondary:hover{
-      border-color: rgba(11,61,145,.35);
-      box-shadow: 0 10px 24px rgba(11,61,145,.12);
-    }
-    .micro-trust{ display:flex; flex-wrap:wrap; gap:10px; margin-top: 10px; }
-    .chip{
-      font-size:.9rem;
-      color:#334155;
-      background: rgba(255,255,255,.9);
-      border: 1px solid var(--line);
-      padding: 8px 10px;
-      border-radius: 999px;
+      min-width: 0;
     }
 
-    .hero-figure{
-      margin:0;
-      border-radius: var(--radius);
-      overflow:hidden;
-      box-shadow: var(--shadow);
-      border: 1px solid rgba(11,61,145,.12);
-      background:#fff;
+    .logo-wrap img {
+      height: 74px;
+      width: auto;
+      object-fit: contain;
     }
-    .hero-figure img{ width:100%; height:auto; display:block; border-radius:0; }
 
-    /* SECTIONS */
-    .section{ padding: 72px 0; }
-    .section h2{ color: var(--ink); letter-spacing:-0.01em; margin-bottom: 10px; }
-    .subhead{ color: var(--muted); font-size: 1.05rem; margin-bottom: 22px; max-width: 74ch; }
+    .brand-text {
+      display: flex;
+      flex-direction: column;
+      line-height: 1.1;
+    }
 
-    /* Animated service cards */
-    .cards{
-      display:grid;
-      grid-template-columns: repeat(3, minmax(260px, 1fr));
-      gap: 18px;
+    .brand-text .name {
+      font-size: 1.15rem;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      color: #111827;
     }
-    .card{
-      background: var(--card);
-      border: 1px solid var(--line);
-      border-radius: var(--radius);
-      padding: 18px;
-      box-shadow: var(--shadow2);
-      transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease;
-      position: relative;
-      overflow:hidden;
-    }
-    .card:before{
-      content:"";
-      position:absolute;
-      inset:-1px;
-      background:
-        radial-gradient(480px 240px at 20% 0%, rgba(11,61,145,.14), transparent 60%),
-        radial-gradient(360px 220px at 100% 10%, rgba(201,162,74,.12), transparent 55%);
-      opacity: 0;
-      transition: opacity .18s ease;
-      pointer-events:none;
-    }
-    .card:hover{
-      transform: translateY(-6px);
-      box-shadow: 0 22px 48px rgba(2,6,23,.14);
-      border-color: rgba(11,61,145,.25);
-    }
-    .card:hover:before{ opacity: 1; }
-    .card > *{ position: relative; z-index: 1; }
 
-    .card img{ width:100%; height:auto; border-radius: var(--radius2); margin-bottom: 12px; display:block; }
-    .card h3{ color: var(--brand); margin: 8px 0 8px; font-size: 1.15rem; }
-    .card p{ color: var(--muted); margin: 0 0 10px; }
-    .bullets{ margin: 0; padding-left: 18px; color:#334155; }
+    .brand-text .tagline {
+      font-size: 0.82rem;
+      color: #6b7280;
+      font-weight: 500;
+      margin-top: 4px;
+    }
 
-    /* Credibility */
-    .cred{
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 28px;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: #374151;
+      transition: color 0.25s ease;
+    }
+
+    nav a:hover {
+      color: #111827;
+    }
+
+    .nav-btn {
+      padding: 12px 18px;
+      background: #111827;
+      color: #ffffff;
+      border-radius: 8px;
+      font-weight: 600;
+      transition: transform 0.25s ease, opacity 0.25s ease;
+    }
+
+    .nav-btn:hover {
+      transform: translateY(-1px);
+      opacity: 0.92;
+    }
+
+    /* HERO */
+    .hero {
+      background: linear-gradient(120deg, #0f172a, #1e293b);
+      color: #ffffff;
+      padding: 130px 20px 110px;
+      text-align: center;
+    }
+
+    .hero-inner {
+      max-width: 980px;
+      margin: 0 auto;
+    }
+
+    .hero-eyebrow {
+      display: inline-block;
+      font-size: 0.84rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      font-weight: 700;
+      color: rgba(255,255,255,0.78);
+      margin-bottom: 20px;
+    }
+
+    .hero h1 {
+      font-size: clamp(2.4rem, 5vw, 4.4rem);
+      font-weight: 800;
+      letter-spacing: -0.04em;
+      line-height: 1.04;
+      margin-bottom: 22px;
+    }
+
+    .hero p {
+      font-size: 1.18rem;
+      max-width: 760px;
+      margin: 0 auto;
+      opacity: 0.92;
+    }
+
+    .hero-actions {
+      margin-top: 34px;
+      display: flex;
+      justify-content: center;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .btn-primary,
+    .btn-secondary {
+      display: inline-block;
+      padding: 14px 30px;
+      border-radius: 8px;
+      font-weight: 700;
+      transition: all 0.25s ease;
+    }
+
+    .btn-primary {
       background: #ffffff;
-      border-top: 1px solid var(--line);
-      border-bottom: 1px solid var(--line);
+      color: #0f172a;
     }
-    .cred-grid{
-      display:grid;
-      grid-template-columns: 1.1fr .9fr;
-      gap: 26px;
+
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      opacity: 0.95;
+    }
+
+    .btn-secondary {
+      border: 1px solid rgba(255,255,255,0.25);
+      color: #ffffff;
+      background: rgba(255,255,255,0.04);
+    }
+
+    .btn-secondary:hover {
+      background: rgba(255,255,255,0.10);
+      transform: translateY(-2px);
+    }
+
+    /* SECTION GENERIC */
+    section {
+      padding: 90px 0;
+    }
+
+    .section-divider {
+      border-top: 1px solid #e5e7eb;
+    }
+
+    .section-header {
+      max-width: 760px;
+      margin-bottom: 46px;
+    }
+
+    .section-header .eyebrow {
+      font-size: 0.82rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: #6b7280;
+      font-weight: 700;
+      margin-bottom: 14px;
+      display: inline-block;
+    }
+
+    .section-header h2 {
+      font-size: clamp(1.9rem, 3vw, 2.8rem);
+      line-height: 1.1;
+      letter-spacing: -0.03em;
+      margin-bottom: 14px;
+      color: #111827;
+    }
+
+    .section-header p {
+      color: #4b5563;
+      font-size: 1.05rem;
+    }
+
+    /* ABOUT */
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 42px;
       align-items: start;
     }
-    .stats{
-      display:grid;
-      grid-template-columns: repeat(3, minmax(180px, 1fr));
-      gap: 12px;
-      margin-top: 14px;
+
+    .about-copy p {
+      margin-bottom: 18px;
+      color: #374151;
+      font-size: 1.02rem;
     }
-    .stat{
-      background: #fff;
-      border: 1px solid var(--line);
+
+    .about-card {
+      background: #f9fafb;
+      border: 1px solid #e5e7eb;
+      border-radius: 18px;
+      padding: 30px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.04);
+    }
+
+    .about-card h3 {
+      font-size: 1.1rem;
+      margin-bottom: 18px;
+      color: #111827;
+    }
+
+    .about-card ul {
+      list-style: none;
+    }
+
+    .about-card li {
+      padding: 12px 0;
+      border-bottom: 1px solid #e5e7eb;
+      color: #374151;
+      font-weight: 500;
+    }
+
+    .about-card li:last-child {
+      border-bottom: none;
+    }
+
+    /* SERVICES */
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 30px;
+      margin-top: 18px;
+    }
+
+    .service-card {
+      background: #ffffff;
+      padding: 32px;
+      border-radius: 18px;
+      border: 1px solid #e5e7eb;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.05);
+      transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+    }
+
+    .service-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 18px 40px rgba(0,0,0,0.08);
+      border-color: #d1d5db;
+    }
+
+    .service-icon {
+      width: 52px;
+      height: 52px;
       border-radius: 14px;
-      padding: 14px;
-      box-shadow: 0 10px 22px rgba(2,6,23,.06);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #f3f4f6;
+      font-size: 1.4rem;
+      margin-bottom: 18px;
     }
-    .stat .num{ font-weight: 800; font-size: 1.35rem; letter-spacing: -0.02em; color: var(--brand); }
-    .stat .lbl{ color: #64748b; font-size: .92rem; margin-top: 4px; }
 
-    .cred-box{
-      background: linear-gradient(180deg, #ffffff 0%, #f6f8ff 100%);
-      border: 1px solid rgba(11,61,145,.14);
-      border-radius: var(--radius);
-      padding: 18px;
-      box-shadow: var(--shadow2);
+    .service-card h3 {
+      font-size: 1.2rem;
+      margin-bottom: 12px;
+      color: #111827;
+      line-height: 1.2;
     }
-    .quote{ margin: 0; color: #334155; font-size: 1.02rem; }
-    .quote small{ display:block; margin-top: 10px; color:#64748b; }
 
-    /* About */
-    .about-grid{
-      display:grid;
-      grid-template-columns: .95fr 1.05fr;
-      gap: 34px;
-      align-items:center;
+    .service-card p {
+      color: #4b5563;
+      font-size: 0.98rem;
     }
-    .about-figure{
-      margin:0;
-      border-radius: var(--radius);
-      overflow:hidden;
-      border: 1px solid var(--line);
-      box-shadow: var(--shadow2);
-    }
-    .about-figure img{ border-radius:0; width:100%; display:block; }
 
-    .pill-grid{
-      display:grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 12px;
-      margin-top: 16px;
+    /* CTA */
+    .cta {
+      background: #f9fafb;
+      border-top: 1px solid #e5e7eb;
+      border-bottom: 1px solid #e5e7eb;
     }
-    .pill{
-      background:#fff;
-      border:1px solid var(--line);
-      border-radius: 14px;
-      padding: 14px;
-      box-shadow: 0 10px 22px rgba(2,6,23,.05);
+
+    .cta-box {
+      text-align: center;
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 20px 0;
     }
-    .pill h3{ margin: 0 0 8px; font-size: 1.02rem; color: var(--brand); }
-    .pill ul{ margin:0; padding-left: 18px; color:#334155; }
 
-    /* Contact */
-    .contact-card{
-      background:#fff;
-      border:1px solid var(--line);
-      border-radius: var(--radius);
-      padding: 22px;
-      box-shadow: var(--shadow);
+    .cta-box h2 {
+      font-size: clamp(2rem, 3vw, 2.8rem);
+      line-height: 1.1;
+      letter-spacing: -0.03em;
+      margin-bottom: 16px;
+      color: #111827;
     }
-    form.grid{ gap: 12px; }
 
-    footer{ padding: 34px 0; text-align:center; color:#64748b; }
+    .cta-box p {
+      color: #4b5563;
+      font-size: 1.05rem;
+      margin-bottom: 28px;
+    }
 
-    @media (max-width: 980px){
-      .hero{ padding: 66px 0 42px; }
-      .hero-grid{ grid-template-columns: 1fr; }
-      .cards{ grid-template-columns: 1fr; }
-      .cred-grid{ grid-template-columns: 1fr; }
-      .stats{ grid-template-columns: 1fr; }
-      .about-grid{ grid-template-columns: 1fr; }
-      .pill-grid{ grid-template-columns: 1fr; }
-      .logo-wrap{ width: 260px; height: 64px; }
-      .logo-wrap img{ height: 200px; transform: scale(1.25); }
-      nav{ padding: 12px 14px; }
+    .cta-box .btn-primary {
+      background: #111827;
+      color: #ffffff;
+    }
+
+    /* FOOTER */
+    footer {
+      background: #111827;
+      color: rgba(255,255,255,0.82);
+      padding: 42px 0;
+    }
+
+    .footer-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .footer-left h4 {
+      font-size: 1.05rem;
+      color: #ffffff;
+      margin-bottom: 6px;
+    }
+
+    .footer-left p {
+      font-size: 0.95rem;
+      color: rgba(255,255,255,0.72);
+    }
+
+    .footer-right {
+      display: flex;
+      gap: 18px;
+      flex-wrap: wrap;
+      font-size: 0.95rem;
+      font-weight: 500;
+    }
+
+    .footer-right a:hover {
+      color: #ffffff;
+    }
+
+    /* MOBILE */
+    @media (max-width: 900px) {
+      .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      nav ul {
+        gap: 16px;
+      }
+
+      .about-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero {
+        padding: 110px 20px 90px;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .logo-wrap img {
+        height: 62px;
+      }
+
+      .brand-text .name {
+        font-size: 1rem;
+      }
+
+      .brand-text .tagline {
+        font-size: 0.78rem;
+      }
+
+      nav ul {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .hero-actions {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .btn-primary,
+      .btn-secondary,
+      .nav-btn {
+        width: 100%;
+        max-width: 320px;
+        text-align: center;
+      }
     }
   </style>
-
-  <!-- Structured data -->
-  <script type="application/ld+json">
-  {
-    "@context":"https://schema.org",
-    "@type":"Organization",
-    "name":"MCK Strategy Corporation",
-    "url":"https://mckstrategycorp.com",
-    "logo":"https://mckstrategycorp.com/logo.png",
-    "description":"People & Culture consulting specializing in workforce enablement, optimization, transformation and change."
-  }
-  </script>
 </head>
-
 <body>
-  <nav class="container-fluid">
-    <ul>
-      <li>
-        <!-- ONLY ONE LOGO ON PURPOSE -->
-        <div class="logo-wrap">
-          <img src="logo.png" alt="MCK Strategy Corporation logo" />
+
+  <header>
+    <div class="container navbar">
+      <div class="logo-wrap">
+        <img src="logo.png" alt="MCK Strategy Corp Logo">
+        <div class="brand-text">
+          <span class="name">MCK Strategy Corp</span>
+          <span class="tagline">People. Culture. Workforce Transformation.</span>
         </div>
-      </li>
-    </ul>
-    <ul class="nav-links">
-      <li><a href="#services">Services</a></li>
-      <li><a href="#credibility">Credibility</a></li>
-      <li><a href="#about">About</a></li>
-      <li><a href="#contact" role="button">Contact</a></li>
-    </ul>
-  </nav>
+      </div>
 
-  <header class="hero-wrap">
-    <main class="container">
-      <section class="hero" id="top">
-        <div class="hero-grid">
-          <div>
-            <div class="kicker">People &amp; Culture Consulting</div>
-            <h1>Elevating People, Performance and Results</h1>
-            <p class="lead">
-              Strategic consulting for organizations seeking to enable talent, optimize workforce performance,
-              and lead transformation with confidence.
-            </p>
-
-            <div class="hero-cta">
-              <a href="#contact" role="button">Schedule a Consultation</a>
-              <a href="#services" class="secondary">Explore Services</a>
-            </div>
-
-            <div class="micro-trust">
-              <span class="chip">Workforce Enablement</span>
-              <span class="chip">Optimization</span>
-              <span class="chip">Transformation &amp; Change</span>
-            </div>
-          </div>
-
-          <figure class="hero-figure">
-            <img src="MCG main site picture.jpg" alt="Executive consulting session" />
-          </figure>
-        </div>
-      </section>
-    </main>
+      <nav>
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#contact" class="nav-btn">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
 
-  <section id="services" class="section">
-    <div class="container">
-      <h2>Consulting Services</h2>
-      <p class="subhead">
-        Practical, executive-ready support that aligns people strategy with business outcomes — from enablement to enterprise transformation.
+  <section class="hero">
+    <div class="hero-inner">
+      <div class="hero-eyebrow">Strategic Advisory for Modern Organizations</div>
+      <h1>Transforming Workforce Strategy, Leadership, and Culture for Sustainable Growth</h1>
+      <p>
+        MCK Strategy Corp partners with organizations to modernize people strategy, strengthen leadership capability,
+        redesign operating models, and enable change that delivers measurable business value.
       </p>
 
-      <div class="cards">
-        <article class="card">
-          <img src="image digital laptop.webp" alt="Workforce enablement" />
-          <h3>Workforce Enablement</h3>
-          <p>Build capability and alignment so leaders and teams can execute with clarity and confidence.</p>
-          <ul class="bullets">
-            <li>Leadership &amp; capability enablement</li>
-            <li>Talent alignment &amp; performance frameworks</li>
-            <li>Engagement and adoption systems</li>
-          </ul>
-        </article>
-
-        <article class="card">
-          <img src="image data.webp" alt="Organizational optimization" />
-          <h3>Organizational Optimization</h3>
-          <p>Improve how work gets done — operating models, workforce planning, and performance measures.</p>
-          <ul class="bullets">
-            <li>Workforce planning &amp; optimization</li>
-            <li>Operating model &amp; role clarity</li>
-            <li>Measurement, insights &amp; decision support</li>
-          </ul>
-        </article>
-
-        <article class="card">
-          <img src="image ideas.webp" alt="Transformation and change" />
-          <h3>Transformation &amp; Change</h3>
-          <p>Deliver sustainable change with structured planning, communication, and culture alignment.</p>
-          <ul class="bullets">
-            <li>Change strategy &amp; stakeholder alignment</li>
-            <li>Culture transformation &amp; adoption</li>
-            <li>Roadmaps, governance &amp; execution support</li>
-          </ul>
-        </article>
+      <div class="hero-actions">
+        <a href="#services" class="btn-primary">Explore Services</a>
+        <a href="#contact" class="btn-secondary">Get in Touch</a>
       </div>
     </div>
   </section>
 
-  
-
-  <section id="about" class="section">
+  <section id="about" class="section-divider">
     <div class="container">
+      <div class="section-header">
+        <span class="eyebrow">About</span>
+        <h2>Executive-Level Advisory at the Intersection of Business, People, and Transformation</h2>
+        <p>
+          We help organizations align workforce, leadership, and culture priorities to enterprise strategy
+          through practical, high-impact advisory services.
+        </p>
+      </div>
+
       <div class="about-grid">
-        <figure class="about-figure">
-          <img src="image team working together.webp" alt="Leadership alignment and team collaboration" />
-        </figure>
-
-        <div>
-          <div class="kicker">Our Approach</div>
-          <h2>About MCK Strategy Corporation</h2>
-          <p class="subhead">
-            We partner with organizations to elevate people strategy and align workforce capabilities with business outcomes.
+        <div class="about-copy">
+          <p>
+            MCK Strategy Corp provides strategic consulting focused on people and culture transformation,
+            leadership effectiveness, organizational design, and workforce modernization.
           </p>
-          <p style="color:var(--muted);">
-            Our work focuses on leadership alignment, cultural strength, and measurable organizational performance — supported by practical roadmaps and execution support.
+          <p>
+            We work with organizations navigating growth, change, integration, modernization, and capability-building
+            to create stronger operating models and more resilient cultures.
           </p>
-
-          <div class="pill-grid">
-            <div class="pill">
-              <h3>What You Can Expect</h3>
-              <ul>
-                <li>Executive-ready recommendations</li>
-                <li>Structured change planning</li>
-                <li>Clear measures of success</li>
-              </ul>
-            </div>
-            <div class="pill">
-              <h3>Ideal For</h3>
-              <ul>
-                <li>Growth &amp; transformation initiatives</li>
-                <li>HR &amp; people operating model evolution</li>
-                <li>Culture and engagement improvement</li>
-              </ul>
-            </div>
-          </div>
+          <p>
+            Our approach is practical, executive-minded, and outcomes-focused — helping leaders move from strategy
+            to execution with clarity, alignment, and momentum.
+          </p>
         </div>
 
+        <div class="about-card">
+          <h3>Core Focus Areas</h3>
+          <ul>
+            <li>Workforce Strategy & Operating Model Design</li>
+            <li>Leadership & Culture Transformation</li>
+            <li>Talent, Learning & Capability Architecture</li>
+            <li>Enterprise Change & Adoption Enablement</li>
+            <li>HR Modernization & Strategic Advisory</li>
+          </ul>
+        </div>
       </div>
     </div>
   </section>
 
-  <section id="contact" class="section" aria-label="Contact">
+  <section id="services" class="section-divider">
     <div class="container">
-      <article class="contact-card">
-        <h2>Partner With Us</h2>
-        <p class="subhead">Start a conversation about how we can support your organization.</p>
-
-        <form class="grid">
-          <input type="text" name="name" placeholder="Your Name" aria-label="Your Name" required />
-          <input type="email" name="email" placeholder="Your Email" aria-label="Your Email" required />
-          <button type="submit" onclick="event.preventDefault()">Request a Call</button>
-        </form>
-
-        <p style="margin-top:12px; color:#64748b;">
-          Next step: once Google Workspace is active, we can connect this form to email you directly.
+      <div class="section-header">
+        <span class="eyebrow">Services</span>
+        <h2>Consulting Services Designed for Enterprise Impact</h2>
+        <p>
+          Strategic support for organizations seeking to strengthen people systems, leadership capability,
+          and business readiness in times of transformation.
         </p>
-      </article>
+      </div>
+
+      <div class="services-grid">
+        <div class="service-card">
+          <div class="service-icon">◼</div>
+          <h3>Workforce Strategy</h3>
+          <p>
+            Design workforce strategies that align talent, capability, and structure to business priorities,
+            future demand, and operational resilience.
+          </p>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon">◆</div>
+          <h3>Organizational Design</h3>
+          <p>
+            Redesign roles, structures, accountabilities, and operating models to improve clarity,
+            agility, and enterprise performance.
+          </p>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon">▲</div>
+          <h3>Leadership & Culture</h3>
+          <p>
+            Build leadership capability and cultural alignment to support growth, trust, engagement,
+            and execution through change.
+          </p>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon">●</div>
+          <h3>Change & Transformation</h3>
+          <p>
+            Lead enterprise change efforts with strong governance, stakeholder alignment, communication,
+            readiness planning, and adoption support.
+          </p>
+        </div>
+      </div>
     </div>
   </section>
 
-  <footer class="container">
-    <small>© 2026 MCK Strategy Corporation • Strategic People &amp; Culture Consulting</small>
+  <section class="cta" id="contact">
+    <div class="container">
+      <div class="cta-box">
+        <h2>Ready to Elevate Your People and Transformation Agenda?</h2>
+        <p>
+          Let’s discuss how MCK Strategy Corp can support your organization with executive-level
+          advisory across workforce, culture, and change.
+        </p>
+        <a href="mailto:your@email.com" class="btn-primary">Contact Us</a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container footer-inner">
+      <div class="footer-left">
+        <h4>MCK Strategy Corp</h4>
+        <p>Strategic advisory in people, culture, workforce, and transformation.</p>
+      </div>
+
+      <div class="footer-right">
+        <a href="mailto:your@email.com">Email</a>
+        <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      </div>
+    </div>
   </footer>
+
 </body>
 </html>
