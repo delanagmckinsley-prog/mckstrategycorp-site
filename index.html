@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>MCK Strategy &amp; Consulting | Workforce, Culture &amp; Transformation Advisory</title>
+  <title>MCK Strategy &amp; Consulting | Workforce &amp; Transformation Advisory</title>
   <meta
     name="description"
     content="MCK Strategy & Consulting provides executive advisory services in workforce strategy, leadership, culture transformation, organizational design, HR modernization, and enterprise change."
@@ -13,11 +13,14 @@
     name="keywords"
     content="workforce strategy consulting, people and culture consulting, organizational design, change management consulting, HR transformation, leadership consulting, Calgary consulting, Canada consulting"
   />
-  <meta name="author" content="MCK Strategy & Consulting" />
+  <meta name="author" content="MCK Strategy &amp; Consulting" />
   <meta name="robots" content="index, follow" />
   <meta name="theme-color" content="#0f172a" />
 
-  <!-- Open Graph / Social Sharing -->
+  <!-- Canonical -->
+  <link rel="canonical" href="https://www.mckstrategycorp.com/" />
+
+  <!-- Open Graph -->
   <meta property="og:title" content="MCK Strategy &amp; Consulting" />
   <meta
     property="og:description"
@@ -37,28 +40,24 @@
   />
   <meta name="twitter:image" content="https://www.mckstrategycorp.com/logo.png" />
 
-  <!-- Canonical -->
-  <link rel="canonical" href="https://www.mckstrategycorp.com/" />
-
   <!-- Font -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
 
-  <!-- Structured Data for Google -->
+  <!-- Structured Data -->
   <script type="application/ld+json">
   {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "MCK Strategy & Consulting",
-    "url": "https://www.mckstrategycorp.com/",
-    "logo": "https://www.mckstrategycorp.com/logo.png",
-    "description": "Executive advisory services in workforce strategy, leadership, culture transformation, organizational design, HR modernization, and enterprise change.",
-    "sameAs": [
-      "https://www.linkedin.com/company/mck-strategy/"
+    "@context":"https://schema.org",
+    "@type":"Organization",
+    "name":"MCK Strategy & Consulting",
+    "url":"https://www.mckstrategycorp.com/",
+    "logo":"https://www.mckstrategycorp.com/logo.png",
+    "sameAs":[
+      "https://www.linkedin.com/in/delana-mckinsley-mba-52341811"
     ],
-    "contactPoint": {
-      "@type": "ContactPoint",
-      "email": "delana@mckstrategycorp.com",
-      "contactType": "customer service"
+    "contactPoint":{
+      "@type":"ContactPoint",
+      "email":"delana@mckstrategycorp.com",
+      "contactType":"customer service"
     }
   }
   </script>
@@ -77,15 +76,18 @@
     body {
       font-family: 'Inter', sans-serif;
       color: #111827;
-      background: #ffffff;
+      background:
+        radial-gradient(circle at top left, rgba(15, 23, 42, 0.025), transparent 28%),
+        radial-gradient(circle at bottom right, rgba(15, 23, 42, 0.03), transparent 24%),
+        linear-gradient(to bottom, #ffffff, #fcfcfd);
       line-height: 1.6;
       -webkit-font-smoothing: antialiased;
       text-rendering: optimizeLegibility;
     }
 
     a {
-      text-decoration: none;
       color: inherit;
+      text-decoration: none;
     }
 
     img {
@@ -99,13 +101,49 @@
       margin: 0 auto;
     }
 
-    /* HEADER */
+    .section-divider {
+      border-top: 1px solid #e5e7eb;
+    }
+
+    section {
+      padding: 90px 0;
+    }
+
+    .section-header {
+      max-width: 760px;
+      margin-bottom: 46px;
+    }
+
+    .section-header .eyebrow {
+      display: inline-block;
+      margin-bottom: 14px;
+      font-size: 0.82rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: #6b7280;
+    }
+
+    .section-header h2 {
+      font-size: clamp(1.9rem, 3vw, 2.8rem);
+      line-height: 1.1;
+      letter-spacing: -0.03em;
+      margin-bottom: 14px;
+      color: #111827;
+    }
+
+    .section-header p {
+      color: #4b5563;
+      font-size: 1.05rem;
+    }
+
+    /* Header */
     header {
       position: sticky;
       top: 0;
       z-index: 1000;
-      background: rgba(255, 255, 255, 0.96);
-      backdrop-filter: blur(10px);
+      background: rgba(255, 255, 255, 0.94);
+      backdrop-filter: blur(12px);
       border-bottom: 1px solid #e5e7eb;
     }
 
@@ -113,8 +151,8 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      padding: 18px 0;
       gap: 20px;
+      padding: 18px 0;
     }
 
     .logo-wrap {
@@ -125,7 +163,7 @@
     }
 
     .logo-wrap img {
-      height: 96px;
+      height: 92px;
       width: auto;
       object-fit: contain;
     }
@@ -183,25 +221,31 @@
       opacity: 0.92;
     }
 
-    /* HERO */
+    /* Hero */
     .hero {
-      background:
-        linear-gradient(rgba(15, 23, 42, 0.72), rgba(15, 23, 42, 0.84)),
-        radial-gradient(circle at top, rgba(255,255,255,0.08), transparent 38%),
-        linear-gradient(120deg, #0f172a, #1e293b 55%, #334155);
-      color: #ffffff;
-      padding: 142px 20px 116px;
-      text-align: center;
       position: relative;
       overflow: hidden;
+      background:
+        linear-gradient(rgba(15, 23, 42, 0.74), rgba(15, 23, 42, 0.86)),
+        radial-gradient(circle at top, rgba(255,255,255,0.08), transparent 36%),
+        linear-gradient(120deg, #0f172a, #1e293b 55%, #334155);
+      color: #ffffff;
+      text-align: center;
+      padding: 145px 20px 118px;
     }
 
-    /* premium consulting-firm effect */
     .hero::before {
       content: "";
       position: absolute;
       inset: 0;
-      background: linear-gradient(to right, rgba(255,255,255,0.04), transparent 18%, transparent 82%, rgba(255,255,255,0.04));
+      background:
+        linear-gradient(to right, rgba(255,255,255,0.035), transparent 18%, transparent 82%, rgba(255,255,255,0.035)),
+        repeating-linear-gradient(
+          90deg,
+          transparent 0,
+          transparent 79px,
+          rgba(255,255,255,0.025) 80px
+        );
       pointer-events: none;
     }
 
@@ -213,14 +257,14 @@
       transform: translateX(-50%);
       width: min(1200px, 92%);
       height: 1px;
-      background: rgba(255,255,255,0.16);
+      background: rgba(255,255,255,0.15);
     }
 
     .hero-inner {
-      max-width: 980px;
-      margin: 0 auto;
       position: relative;
       z-index: 1;
+      max-width: 980px;
+      margin: 0 auto;
     }
 
     .hero-eyebrow {
@@ -234,7 +278,7 @@
     }
 
     .hero h1 {
-      font-size: clamp(2.5rem, 5vw, 4.6rem);
+      font-size: clamp(2.5rem, 5vw, 4.7rem);
       font-weight: 800;
       letter-spacing: -0.045em;
       line-height: 1.03;
@@ -298,44 +342,7 @@
       border-radius: 999px;
     }
 
-    /* SECTION GENERIC */
-    section {
-      padding: 90px 0;
-    }
-
-    .section-divider {
-      border-top: 1px solid #e5e7eb;
-    }
-
-    .section-header {
-      max-width: 760px;
-      margin-bottom: 46px;
-    }
-
-    .section-header .eyebrow {
-      font-size: 0.82rem;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      color: #6b7280;
-      font-weight: 700;
-      margin-bottom: 14px;
-      display: inline-block;
-    }
-
-    .section-header h2 {
-      font-size: clamp(1.9rem, 3vw, 2.8rem);
-      line-height: 1.1;
-      letter-spacing: -0.03em;
-      margin-bottom: 14px;
-      color: #111827;
-    }
-
-    .section-header p {
-      color: #4b5563;
-      font-size: 1.05rem;
-    }
-
-    /* ABOUT */
+    /* About */
     .about-grid {
       display: grid;
       grid-template-columns: 1.15fr 0.85fr;
@@ -350,7 +357,7 @@
     }
 
     .about-card {
-      background: #f9fafb;
+      background: rgba(249, 250, 251, 0.92);
       border: 1px solid #e5e7eb;
       border-radius: 18px;
       padding: 30px;
@@ -378,7 +385,7 @@
       border-bottom: none;
     }
 
-    /* SERVICES */
+    /* Services */
     .services-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -387,17 +394,22 @@
     }
 
     .service-card {
-      background: #ffffff;
+      background: rgba(255,255,255,0.95);
       padding: 32px;
       border-radius: 18px;
       border: 1px solid #e5e7eb;
       box-shadow: 0 8px 25px rgba(0,0,0,0.05);
-      transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+      transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+      animation: floatIn 0.7s ease both;
     }
 
+    .service-card:nth-child(2) { animation-delay: 0.08s; }
+    .service-card:nth-child(3) { animation-delay: 0.16s; }
+    .service-card:nth-child(4) { animation-delay: 0.24s; }
+
     .service-card:hover {
-      transform: translateY(-6px);
-      box-shadow: 0 18px 40px rgba(0,0,0,0.08);
+      transform: translateY(-8px);
+      box-shadow: 0 22px 46px rgba(0,0,0,0.08);
       border-color: #d1d5db;
     }
 
@@ -426,6 +438,98 @@
     .service-card p {
       color: #4b5563;
       font-size: 0.98rem;
+    }
+
+    /* Credibility */
+    .credibility {
+      background: linear-gradient(to bottom, #f9fafb, #ffffff);
+    }
+
+    .credibility-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 22px;
+    }
+
+    .cred-card {
+      background: #ffffff;
+      border: 1px solid #e5e7eb;
+      border-radius: 18px;
+      padding: 26px;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.04);
+    }
+
+    .cred-number {
+      font-size: 2rem;
+      font-weight: 800;
+      line-height: 1;
+      color: #111827;
+      margin-bottom: 10px;
+      letter-spacing: -0.03em;
+    }
+
+    .cred-card h3 {
+      font-size: 1rem;
+      margin-bottom: 8px;
+      color: #111827;
+    }
+
+    .cred-card p {
+      font-size: 0.96rem;
+      color: #4b5563;
+    }
+
+    /* LinkedIn / Insights */
+    .insights-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+
+    .insight-card {
+      background: #ffffff;
+      border: 1px solid #e5e7eb;
+      border-radius: 18px;
+      padding: 28px;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.04);
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+    }
+
+    .insight-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 18px 38px rgba(0,0,0,0.07);
+    }
+
+    .insight-type {
+      display: inline-block;
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.11em;
+      text-transform: uppercase;
+      color: #6b7280;
+      margin-bottom: 14px;
+    }
+
+    .insight-card h3 {
+      font-size: 1.16rem;
+      line-height: 1.25;
+      margin-bottom: 12px;
+      color: #111827;
+    }
+
+    .insight-card p {
+      color: #4b5563;
+      margin-bottom: 18px;
+      font-size: 0.97rem;
+    }
+
+    .insight-link {
+      font-weight: 700;
+      color: #111827;
+    }
+
+    .insight-link:hover {
+      text-decoration: underline;
     }
 
     /* CTA */
@@ -459,13 +563,16 @@
     .cta-box .btn-primary {
       background: #111827;
       color: #ffffff;
+      box-shadow: none;
     }
 
-    /* FOOTER */
+    /* Footer */
     footer {
       background: #111827;
       color: rgba(255,255,255,0.82);
       padding: 42px 0;
+      position: relative;
+      z-index: 10;
     }
 
     .footer-inner {
@@ -493,14 +600,41 @@
       flex-wrap: wrap;
       font-size: 0.95rem;
       font-weight: 500;
+      position: relative;
+      z-index: 11;
+    }
+
+    .footer-right a {
+      color: rgba(255,255,255,0.86);
+      text-decoration: none;
+      position: relative;
+      z-index: 12;
     }
 
     .footer-right a:hover {
       color: #ffffff;
+      text-decoration: underline;
     }
 
-    /* MOBILE */
-    @media (max-width: 900px) {
+    @keyframes floatIn {
+      from {
+        opacity: 0;
+        transform: translateY(14px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* Mobile */
+    @media (max-width: 980px) {
+      .about-grid,
+      .credibility-grid,
+      .insights-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
       .navbar {
         flex-direction: column;
         align-items: flex-start;
@@ -509,19 +643,11 @@
       nav ul {
         gap: 16px;
       }
-
-      .about-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .hero {
-        padding: 112px 20px 92px;
-      }
     }
 
     @media (max-width: 640px) {
       .logo-wrap img {
-        height: 78px;
+        height: 76px;
       }
 
       .brand-text .name {
@@ -537,6 +663,10 @@
         align-items: flex-start;
       }
 
+      .hero {
+        padding: 112px 20px 92px;
+      }
+
       .hero-actions {
         flex-direction: column;
         align-items: center;
@@ -549,6 +679,12 @@
         max-width: 320px;
         text-align: center;
       }
+
+      .about-grid,
+      .credibility-grid,
+      .insights-grid {
+        grid-template-columns: 1fr;
+      }
     }
   </style>
 </head>
@@ -557,7 +693,7 @@
   <header>
     <div class="container navbar">
       <div class="logo-wrap">
-        <img src="logo.png" alt="MCK Strategy & Consulting Logo">
+        <img src="logo.png" alt="MCK Strategy & Consulting Logo" />
         <div class="brand-text">
           <span class="name">MCK Strategy &amp; Consulting</span>
           <span class="tagline">People. Culture. Workforce Transformation.</span>
@@ -568,6 +704,8 @@
         <ul>
           <li><a href="#about">About</a></li>
           <li><a href="#services">Services</a></li>
+          <li><a href="#credibility">Credentials</a></li>
+          <li><a href="#insights">Insights</a></li>
           <li><a href="#contact" class="nav-btn">Contact</a></li>
         </ul>
       </nav>
@@ -685,6 +823,85 @@
       </div>
     </section>
 
+    <section id="credibility" class="credibility section-divider">
+      <div class="container">
+        <div class="section-header">
+          <span class="eyebrow">Credentials</span>
+          <h2>Executive Experience That Connects Strategy to Execution</h2>
+          <p>
+            Advisory support grounded in real enterprise transformation, people strategy, operating model redesign, and change leadership.
+          </p>
+        </div>
+
+        <div class="credibility-grid">
+          <div class="cred-card">
+            <div class="cred-number">15+</div>
+            <h3>Years of Leadership</h3>
+            <p>Progressive experience across people, culture, transformation, and enterprise advisory roles.</p>
+          </div>
+
+          <div class="cred-card">
+            <div class="cred-number">4</div>
+            <h3>Core Advisory Pillars</h3>
+            <p>Workforce strategy, organization design, leadership and culture, and enterprise transformation.</p>
+          </div>
+
+          <div class="cred-card">
+            <div class="cred-number">C-Suite</div>
+            <h3>Executive Engagement</h3>
+            <p>Trusted advisory support for senior leaders navigating growth, change, modernization, and alignment.</p>
+          </div>
+
+          <div class="cred-card">
+            <div class="cred-number">National</div>
+            <h3>Canadian Perspective</h3>
+            <p>Experience supporting organizations in complex, regulated, and transformation-driven environments.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="insights" class="section-divider">
+      <div class="container">
+        <div class="section-header">
+          <span class="eyebrow">Insights</span>
+          <h2>Thought Leadership and Executive Perspective</h2>
+          <p>
+            A place to highlight your ideas on workforce strategy, leadership capability, HR modernization, and transformation.
+          </p>
+        </div>
+
+        <div class="insights-grid">
+          <div class="insight-card">
+            <span class="insight-type">Article</span>
+            <h3>Workforce Strategy Is Now a Value Creation Lever</h3>
+            <p>
+              A perspective on how workforce architecture, skills, and operating model choices directly influence enterprise performance.
+            </p>
+            <a class="insight-link" href="https://www.linkedin.com/in/delana-mckinsley-mba-52341811" target="_blank" rel="noopener noreferrer">View on LinkedIn</a>
+          </div>
+
+          <div class="insight-card">
+            <span class="insight-type">Perspective</span>
+            <h3>Leadership Capability in Times of Enterprise Change</h3>
+            <p>
+              Insights on enabling leaders to guide adoption, sustain culture, and execute confidently through transformation.
+            </p>
+            <a class="insight-link" href="https://www.linkedin.com/in/delana-mckinsley-mba-52341811" target="_blank" rel="noopener noreferrer">Connect on LinkedIn</a>
+          </div>
+
+          <div class="insight-card">
+            <span class="insight-type">Advisory View</span>
+            <h3>Modern HR Operating Models for Business Agility</h3>
+            <p>
+              A look at how HR modernization, governance, and capability design can accelerate business readiness and resilience.
+            </p>
+            <a class="insight-link" href="https://www.linkedin.com/in/delana-mckinsley-mba-52341811" target="_blank" rel="noopener noreferrer">Follow Updates</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <section class="cta" id="contact">
       <div class="container">
         <div class="cta-box">
@@ -707,8 +924,8 @@
       </div>
 
       <div class="footer-right">
-        <a href="mailto:delana@mckstrategycorp.com">Email</a>
-        <a href="https://www.linkedin.com/company/mck-strategy/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <a href="mailto:delana@mckstrategycorp.com">delana@mckstrategycorp.com</a>
+        <a href="https://www.linkedin.com/in/delana-mckinsley-mba-52341811" target="_blank" rel="noopener noreferrer">LinkedIn</a>
       </div>
     </div>
   </footer>
