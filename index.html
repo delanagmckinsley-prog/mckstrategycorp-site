@@ -1,812 +1,433 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-  <title>Mckinsley Strategy &amp; Consulting Co. | Workforce, Culture &amp; Transformation Advisory</title>
-  <meta
-    name="description"
-    content="Mckinsley Strategy & Consulting Co. provides executive advisory services in workforce strategy, leadership, culture transformation, organizational design, HR modernization, and enterprise change."
-  />
-  <meta
-    name="keywords"
-    content="workforce strategy consulting, people and culture consulting, organizational design, change management consulting, HR transformation, leadership consulting, Calgary consulting, Canada consulting"
-  />
-  <meta name="author" content="Mckinsley Strategy &amp; Consulting Co." />
-  <meta name="robots" content="index, follow" />
-  <meta name="theme-color" content="#0f172a" />
-
-  <style>
-    :root {
-      --navy: #0f172a;
-      --navy-2: #111827;
-      --gold: #b79a63;
-      --gold-soft: #d7c29b;
-      --text: #1f2937;
-      --muted: #6b7280;
-      --light: #f8fafc;
-      --white: #ffffff;
-      --border: #e5e7eb;
-      --shadow: 0 12px 30px rgba(15, 23, 42, 0.08);
-      --shadow-hover: 0 18px 40px rgba(15, 23, 42, 0.14);
-      --radius: 20px;
-      --max: 1180px;
-    }
-
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
-
-    body {
-      font-family: Arial, Helvetica, sans-serif;
-      color: var(--text);
-      background: var(--white);
-      line-height: 1.6;
-      -webkit-font-smoothing: antialiased;
-      text-rendering: optimizeLegibility;
-    }
-
-    img {
-      max-width: 100%;
-      display: block;
-    }
-
-    a {
-      text-decoration: none;
-      color: inherit;
-    }
-
-    .container {
-      width: min(92%, var(--max));
-      margin: 0 auto;
-    }
-
-    .section {
-      padding: 88px 0;
-    }
-
-    .section-title {
-      font-size: clamp(2rem, 3vw, 2.9rem);
-      line-height: 1.12;
-      color: var(--navy);
-      margin-bottom: 14px;
-      letter-spacing: -0.02em;
-    }
-
-    .section-subtitle {
-      max-width: 760px;
-      color: var(--muted);
-      font-size: 1.05rem;
-      margin-bottom: 42px;
-    }
-
-    /* HEADER */
-    header {
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-      background: rgba(255, 255, 255, 0.94);
-      backdrop-filter: blur(12px);
-      border-bottom: 1px solid rgba(229, 231, 235, 0.85);
-    }
-
-    .nav {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 24px;
-      padding: 18px 0;
-    }
-
-    .brand {
-      display: flex;
-      align-items: center;
-      gap: 16px;
-      min-width: 0;
-      flex: 1;
-    }
-
-    .brand-logo img {
-      height: 82px;
-      width: auto;
-      object-fit: contain;
-    }
-
-    .brand-text {
-      display: flex;
-      flex-direction: column;
-      line-height: 1.08;
-    }
-
-    .brand-name {
-      font-size: 1.08rem;
-      font-weight: 700;
-      color: var(--navy);
-      letter-spacing: 0.01em;
-    }
-
-    .brand-tag {
-      font-size: 0.82rem;
-      color: var(--muted);
-      margin-top: 5px;
-    }
-
-    .nav-links {
-      display: flex;
-      align-items: center;
-      gap: 24px;
-      flex-wrap: wrap;
-    }
-
-    .nav-links a {
-      color: var(--text);
-      font-size: 0.96rem;
-      transition: color 0.2s ease;
-    }
-
-    .nav-links a:hover {
-      color: var(--gold);
-    }
-
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      padding: 14px 22px;
-      border-radius: 999px;
-      font-weight: 600;
-      transition: all 0.25s ease;
-      cursor: pointer;
-      border: none;
-    }
-
-    .btn-primary {
-      background: var(--navy);
-      color: var(--white);
-      box-shadow: var(--shadow);
-    }
-
-    .btn-primary:hover {
-      transform: translateY(-2px);
-      background: #0b1220;
-    }
-
-    .btn-secondary {
-      background: transparent;
-      color: var(--white);
-      border: 1px solid rgba(255,255,255,0.22);
-    }
-
-    .btn-secondary:hover {
-      transform: translateY(-2px);
-      border-color: var(--gold-soft);
-      color: var(--gold-soft);
-    }
-
-    /* HERO */
-    .hero {
-      position: relative;
-      min-height: 88vh;
-      display: flex;
-      align-items: center;
-      overflow: hidden;
-      background:
-        linear-gradient(120deg, rgba(15, 23, 42, 0.92), rgba(17, 24, 39, 0.80)),
-        url('https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1800&q=80') center/cover no-repeat;
-      color: var(--white);
-    }
-
-    .hero::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background:
-        radial-gradient(circle at 15% 25%, rgba(183, 154, 99, 0.18), transparent 30%),
-        radial-gradient(circle at 82% 20%, rgba(183, 154, 99, 0.14), transparent 26%);
-      pointer-events: none;
-    }
-
-    .hero-content {
-      position: relative;
-      z-index: 2;
-      max-width: 780px;
-      padding: 100px 0;
-    }
-
-    .eyebrow {
-      display: inline-block;
-      padding: 8px 14px;
-      margin-bottom: 20px;
-      border-radius: 999px;
-      border: 1px solid rgba(255,255,255,0.15);
-      background: rgba(255,255,255,0.05);
-      color: var(--gold-soft);
-      font-size: 0.82rem;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-    }
-
-    .hero h1 {
-      font-size: clamp(2.6rem, 5vw, 5rem);
-      line-height: 1.02;
-      letter-spacing: -0.03em;
-      margin-bottom: 20px;
-      max-width: 900px;
-    }
-
-    .hero p {
-      font-size: 1.12rem;
-      color: rgba(255,255,255,0.86);
-      max-width: 720px;
-      margin-bottom: 30px;
-    }
-
-    .hero-actions {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 14px;
-    }
-
-    /* ABOUT */
-    .about-grid {
-      display: grid;
-      grid-template-columns: 1.15fr 0.85fr;
-      gap: 28px;
-      align-items: stretch;
-    }
-
-    .about-card,
-    .founder-card {
-      background: var(--white);
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      padding: 34px;
-      box-shadow: var(--shadow);
-    }
-
-    .about-card p,
-    .founder-card p {
-      color: var(--muted);
-      margin-bottom: 16px;
-    }
-
-    .founder-card h3 {
-      font-size: 1.4rem;
-      color: var(--navy);
-      margin-bottom: 8px;
-    }
-
-    .founder-title {
-      color: var(--gold);
-      font-weight: 700;
-      margin-bottom: 16px;
-    }
-
-    /* SERVICES */
-    .services-section {
-      background: linear-gradient(to bottom, #ffffff 0%, #fbfcfe 100%);
-    }
-
-    .services-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 24px;
-    }
-
-    .service-card {
-      background: var(--white);
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      padding: 30px;
-      box-shadow: var(--shadow);
-      transition: transform 0.28s ease, box-shadow 0.28s ease, border-color 0.28s ease;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .service-card::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 4px;
-      background: linear-gradient(to right, var(--gold), transparent);
-      opacity: 0;
-      transition: opacity 0.28s ease;
-    }
-
-    .service-card:hover {
-      transform: translateY(-8px);
-      box-shadow: var(--shadow-hover);
-      border-color: rgba(183, 154, 99, 0.4);
-    }
-
-    .service-card:hover::before {
-      opacity: 1;
-    }
-
-    .service-icon {
-      width: 56px;
-      height: 56px;
-      border-radius: 16px;
-      display: grid;
-      place-items: center;
-      background: rgba(183, 154, 99, 0.12);
-      color: var(--navy);
-      font-size: 1.15rem;
-      font-weight: 700;
-      margin-bottom: 18px;
-    }
-
-    .service-card h3 {
-      font-size: 1.18rem;
-      color: var(--navy);
-      margin-bottom: 12px;
-      line-height: 1.25;
-    }
-
-    .service-card p {
-      color: var(--muted);
-      font-size: 0.98rem;
-    }
-
-    /* WHY */
-    .why {
-      background: var(--light);
-      border-top: 1px solid var(--border);
-      border-bottom: 1px solid var(--border);
-    }
-
-    .why-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 20px;
-    }
-
-    .why-card {
-      background: var(--white);
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      padding: 26px;
-      box-shadow: var(--shadow);
-    }
-
-    .why-card h4 {
-      font-size: 1.08rem;
-      color: var(--navy);
-      margin-bottom: 10px;
-    }
-
-    .why-card p {
-      color: var(--muted);
-      font-size: 0.96rem;
-    }
-
-    /* CTA */
-    .cta-box {
-      background: linear-gradient(135deg, var(--navy), #182338);
-      color: var(--white);
-      border-radius: 28px;
-      padding: 56px 42px;
-      box-shadow: var(--shadow-hover);
-    }
-
-    .cta-box h2 {
-      font-size: clamp(2rem, 3.5vw, 3rem);
-      line-height: 1.08;
-      margin-bottom: 14px;
-    }
-
-    .cta-box p {
-      color: rgba(255,255,255,0.84);
-      max-width: 780px;
-      margin-bottom: 28px;
-    }
-
-    /* CONTACT */
-    .contact-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 28px;
-    }
-
-    .contact-card {
-      background: var(--white);
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      padding: 32px;
-      box-shadow: var(--shadow);
-    }
-
-    .contact-card h3 {
-      color: var(--navy);
-      margin-bottom: 14px;
-      font-size: 1.24rem;
-    }
-
-    .contact-list {
-      display: grid;
-      gap: 12px;
-    }
-
-    .contact-item {
-      color: var(--muted);
-      font-size: 1rem;
-    }
-
-    .contact-item strong {
-      color: var(--navy);
-    }
-
-    .contact-item a {
-      color: var(--navy);
-      word-break: break-word;
-    }
-
-    .contact-item a:hover {
-      color: var(--gold);
-    }
-
-    /* FOOTER */
-    footer {
-      background: var(--navy);
-      color: rgba(255,255,255,0.78);
-      padding: 28px 0;
-    }
-
-    .footer-inner {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 18px;
-      flex-wrap: wrap;
-    }
-
-    .footer-brand {
-      color: var(--white);
-      font-weight: 700;
-      margin-bottom: 4px;
-    }
-
-    .footer-links {
-      display: flex;
-      gap: 18px;
-      flex-wrap: wrap;
-    }
-
-    .footer-links a:hover {
-      color: var(--gold-soft);
-    }
-
-    /* REVEAL */
-    .reveal {
-      opacity: 0;
-      transform: translateY(24px);
-      transition: opacity 0.7s ease, transform 0.7s ease;
-    }
-
-    .reveal.show {
-      opacity: 1;
-      transform: translateY(0);
-    }
-
-    /* RESPONSIVE */
-    @media (max-width: 1100px) {
-      .services-grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
-
-      .why-grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
-
-      .about-grid,
-      .contact-grid {
-        grid-template-columns: 1fr;
-      }
-    }
-
-    @media (max-width: 760px) {
-      .nav {
-        flex-direction: column;
-        align-items: flex-start;
-      }
-
-      .nav-links {
-        width: 100%;
-        gap: 14px;
-      }
-
-      .brand-logo img {
-        height: 72px;
-      }
-
-      .hero {
-        min-height: auto;
-      }
-
-      .hero-content {
-        padding: 80px 0;
-      }
-
-      .services-grid,
-      .why-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .section {
-        padding: 70px 0;
-      }
-
-      .cta-box {
-        padding: 38px 24px;
-      }
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Mckinsley Strategy & Consulting Co.</title>
+
+<style>
+
+:root{
+--navy:#0f172a;
+--gold:#b79a63;
+--light:#f8fafc;
+--border:#e5e7eb;
+--text:#1f2937;
+--muted:#6b7280;
+--radius:18px;
+}
+
+body{
+font-family:Arial, Helvetica, sans-serif;
+margin:0;
+color:var(--text);
+line-height:1.6;
+}
+
+.container{
+width:90%;
+max-width:1150px;
+margin:auto;
+}
+
+header{
+border-bottom:1px solid var(--border);
+padding:20px 0;
+background:white;
+position:sticky;
+top:0;
+z-index:1000;
+}
+
+.nav{
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
+
+.brand{
+display:flex;
+align-items:center;
+gap:14px;
+}
+
+.brand img{
+height:80px;
+}
+
+.brand-name{
+font-weight:700;
+color:var(--navy);
+}
+
+.nav-links{
+display:flex;
+gap:24px;
+align-items:center;
+}
+
+.hero{
+background:
+linear-gradient(rgba(15,23,42,.85),rgba(15,23,42,.9)),
+url('https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1600&q=80');
+background-size:cover;
+background-position:center;
+color:white;
+padding:120px 0;
+}
+
+.hero h1{
+font-size:48px;
+margin-bottom:20px;
+}
+
+.hero p{
+max-width:700px;
+margin-bottom:30px;
+}
+
+.btn{
+padding:14px 22px;
+border-radius:40px;
+background:var(--navy);
+color:white;
+text-decoration:none;
+font-weight:600;
+}
+
+.section{
+padding:80px 0;
+}
+
+.section-title{
+font-size:32px;
+margin-bottom:10px;
+color:var(--navy);
+}
+
+.section-subtitle{
+color:var(--muted);
+max-width:700px;
+margin-bottom:40px;
+}
+
+.about-grid{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:30px;
+}
+
+.about-card{
+border:1px solid var(--border);
+padding:30px;
+border-radius:var(--radius);
+background:white;
+}
+
+.founder-card{
+border:1px solid var(--border);
+padding:30px;
+border-radius:var(--radius);
+background:white;
+text-align:left;
+}
+
+.founder-photo{
+width:120px;
+height:120px;
+border-radius:50%;
+object-fit:cover;
+margin-bottom:20px;
+border:3px solid var(--gold);
+}
+
+.founder-title{
+color:var(--gold);
+font-weight:700;
+margin-bottom:12px;
+}
+
+.services-grid{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:24px;
+}
+
+.service-card{
+border:1px solid var(--border);
+padding:28px;
+border-radius:var(--radius);
+background:white;
+}
+
+.why{
+background:var(--light);
+}
+
+.why-grid{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:20px;
+}
+
+.why-card{
+background:white;
+border:1px solid var(--border);
+padding:24px;
+border-radius:var(--radius);
+}
+
+.contact-grid{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:28px;
+}
+
+.contact-card{
+border:1px solid var(--border);
+padding:28px;
+border-radius:var(--radius);
+background:white;
+}
+
+footer{
+background:var(--navy);
+color:white;
+padding:30px 0;
+margin-top:40px;
+}
+
+.footer-inner{
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
+
+.footer-brand{
+font-weight:700;
+}
+
+</style>
 </head>
+
 <body>
 
-  <header>
-    <div class="container nav">
-      <a href="#home" class="brand">
-        <div class="brand-logo">
-          <img src="logo.png" alt="Mckinsley Strategy &amp; Consulting Co. logo" />
-        </div>
-        <div class="brand-text">
-          <span class="brand-name">Mckinsley Strategy &amp; Consulting Co.</span>
-          <span class="brand-tag">Workforce, Culture &amp; Transformation Advisory</span>
-        </div>
-      </a>
+<header>
+<div class="container nav">
 
-      <nav class="nav-links">
-        <a href="#about">About</a>
-        <a href="#services">Services</a>
-        <a href="#why">Why Us</a>
-        <a href="#contact">Contact</a>
-        <a class="btn btn-primary" href="#contact">Book a Conversation</a>
-      </nav>
-    </div>
-  </header>
+<div class="brand">
+<img src="logo.png">
+<div class="brand-name">
+Mckinsley Strategy & Consulting Co.
+</div>
+</div>
 
-  <main>
-    <section class="hero" id="home">
-      <div class="container">
-        <div class="hero-content reveal">
-          <div class="eyebrow">Executive Advisory</div>
-          <h1>Helping organizations align workforce strategy, leadership, culture, and transformation.</h1>
-          <p>
-            Mckinsley Strategy &amp; Consulting Co. partners with organizations to modernize people strategy,
-            strengthen leadership capability, redesign operating models, and deliver sustainable business transformation.
-          </p>
-          <div class="hero-actions">
-            <a href="#services" class="btn btn-primary">Explore Services</a>
-            <a href="#contact" class="btn btn-secondary">Get in Touch</a>
-          </div>
-        </div>
-      </div>
-    </section>
+<div class="nav-links">
+<a href="#about">About</a>
+<a href="#services">Services</a>
+<a href="#contact">Contact</a>
+</div>
 
-    <section class="section" id="about">
-      <div class="container">
-        <h2 class="section-title reveal">About Mckinsley Strategy &amp; Consulting Co.</h2>
-        <p class="section-subtitle reveal">
-          Strategic advisory services designed to help leaders navigate growth, complexity, transformation, and workforce evolution with confidence.
-        </p>
+</div>
+</header>
 
-        <div class="about-grid">
-          <div class="about-card reveal">
-            <p>
-              Mckinsley Strategy &amp; Consulting Co. is a boutique advisory firm focused on workforce strategy,
-              organizational effectiveness, leadership enablement, HR transformation, and enterprise change.
-            </p>
-            <p>
-              We work with organizations that need thoughtful, practical, executive-level support to solve
-              critical people and business challenges — from operating model redesign and talent strategy to
-              culture transformation and large-scale organizational change.
-            </p>
-            <p>
-              Our approach blends strategic clarity with real-world execution, helping clients build strong
-              foundations for growth, resilience, and long-term value creation.
-            </p>
-          </div>
+<section class="hero">
+<div class="container">
 
-          <div class="founder-card reveal">
-            <h3>Founder</h3>
-            <div class="founder-title">Delana McKinsley, MBA</div>
-            <p>
-              Delana is a senior People &amp; Culture executive and transformation leader with experience
-              advising and leading across insurance, energy, utilities, technology, and professional services.
-            </p>
-            <p>
-              She brings deep expertise in workforce strategy, organization design, leadership development,
-              HR operating model modernization, and enterprise change — with a strong track record of helping
-              organizations translate strategy into measurable business outcomes.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
+<h1>Workforce, Leadership & Culture Transformation</h1>
 
-    <section class="section services-section" id="services">
-      <div class="container">
-        <h2 class="section-title reveal">Services</h2>
-        <p class="section-subtitle reveal">
-          Advisory support tailored to executive teams, business leaders, and organizations undergoing change, growth, or transformation.
-        </p>
+<p>
+Mckinsley Strategy & Consulting Co. partners with organizations to modernize people strategy,
+strengthen leadership capability, redesign operating models, and deliver sustainable transformation.
+</p>
 
-        <div class="services-grid">
-          <div class="service-card reveal">
-            <div class="service-icon">01</div>
-            <h3>Workforce Strategy</h3>
-            <p>
-              Workforce planning, skills-based architecture, talent strategy, succession frameworks,
-              and future-ready capability design aligned to business priorities.
-            </p>
-          </div>
+<a class="btn" href="#contact">Start a Conversation</a>
 
-          <div class="service-card reveal">
-            <div class="service-icon">02</div>
-            <h3>Organization Design</h3>
-            <p>
-              Operating model redesign, structure alignment, role clarity, governance, and organization
-              effectiveness to improve agility and performance.
-            </p>
-          </div>
+</div>
+</section>
 
-          <div class="service-card reveal">
-            <div class="service-icon">03</div>
-            <h3>Leadership &amp; Culture</h3>
-            <p>
-              Leadership development, culture transformation, capability building, employee experience,
-              and strategies that strengthen organizational health and execution.
-            </p>
-          </div>
+<section class="section" id="about">
+<div class="container">
 
-          <div class="service-card reveal">
-            <div class="service-icon">04</div>
-            <h3>HR Transformation</h3>
-            <p>
-              HR operating model modernization, shared services, COE design, HRIS enablement,
-              and digital transformation to support scalable, modern people functions.
-            </p>
-          </div>
+<h2 class="section-title">About Mckinsley Strategy & Consulting Co.</h2>
 
-          <div class="service-card reveal">
-            <div class="service-icon">05</div>
-            <h3>Enterprise Change</h3>
-            <p>
-              Strategic change advisory, change governance, stakeholder alignment, adoption planning,
-              and implementation support for complex initiatives.
-            </p>
-          </div>
+<p class="section-subtitle">
+Strategic advisory services designed to help organizations navigate transformation,
+growth, leadership development, and workforce modernization.
+</p>
 
-          <div class="service-card reveal">
-            <div class="service-icon">06</div>
-            <h3>Fractional Executive Support</h3>
-            <p>
-              Fractional VP and senior advisory support for organizations needing executive-level people,
-              culture, leadership, or transformation expertise without a full-time structure.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
+<div class="about-grid">
 
-    <section class="section why" id="why">
-      <div class="container">
-        <h2 class="section-title reveal">Why Clients Engage Us</h2>
-        <p class="section-subtitle reveal">
-          Strategic, credible, and practical support for organizations that need both executive insight and execution discipline.
-        </p>
+<div class="about-card">
 
-        <div class="why-grid">
-          <div class="why-card reveal">
-            <h4>Executive Perspective</h4>
-            <p>Senior-level insight grounded in real operating environments, leadership realities, and business priorities.</p>
-          </div>
+<p>
+Mckinsley Strategy & Consulting Co. is a boutique advisory firm focused on workforce strategy,
+organizational effectiveness, leadership enablement, HR transformation, and enterprise change.
+</p>
 
-          <div class="why-card reveal">
-            <h4>Practical Transformation</h4>
-            <p>Clear, actionable strategies that move beyond theory and support measurable implementation.</p>
-          </div>
+<p>
+We partner with organizations seeking executive-level guidance to solve complex
+people and organizational challenges while driving measurable business outcomes.
+</p>
 
-          <div class="why-card reveal">
-            <h4>Cross-Sector Experience</h4>
-            <p>Experience across regulated, complex, growth-oriented, and transformation-heavy industries.</p>
-          </div>
+</div>
 
-          <div class="why-card reveal">
-            <h4>Trusted Advisory</h4>
-            <p>A collaborative, high-trust partner for CEOs, senior leaders, HR teams, and transformation offices.</p>
-          </div>
-        </div>
-      </div>
-    </section>
+<div class="founder-card">
 
-    <section class="section">
-      <div class="container">
-        <div class="cta-box reveal">
-          <h2>Let’s build the people, leadership, and workforce strategies your business needs next.</h2>
-          <p>
-            Whether your organization is scaling, modernizing, restructuring, or navigating complex change,
-            Mckinsley Strategy &amp; Consulting Co. can help shape a practical path forward.
-          </p>
-          <a href="#contact" class="btn btn-primary">Start the Conversation</a>
-        </div>
-      </div>
-    </section>
+<img src="delana.jpeg" class="founder-photo" alt="Delana McKinsley">
 
-    <section class="section" id="contact">
-      <div class="container">
-        <h2 class="section-title reveal">Contact</h2>
-        <p class="section-subtitle reveal">
-          Connect to discuss consulting support, advisory engagements, fractional executive services, or strategic collaboration.
-        </p>
+<h3>Founder</h3>
 
-        <div class="contact-grid">
-          <div class="contact-card reveal">
-            <h3>Mckinsley Strategy &amp; Consulting Co.</h3>
-            <div class="contact-list">
-              <div class="contact-item"><strong>Location:</strong> Calgary, Alberta, Canada</div>
-              <div class="contact-item"><strong>Founder:</strong> Delana McKinsley, MBA</div>
-              <div class="contact-item">
-                <strong>LinkedIn:</strong>
-                <a href="https://www.linkedin.com/in/delana-mckinsley-mba-52341811" target="_blank" rel="noopener noreferrer">
-                  www.linkedin.com/in/delana-mckinsley-mba-52341811
-                </a>
-              </div>
-            </div>
-          </div>
+<div class="founder-title">
+Delana McKinsley, MBA
+</div>
 
-          <div class="contact-card reveal">
-            <h3>How We Help</h3>
-            <div class="contact-list">
-              <div class="contact-item">Executive advisory and consulting engagements</div>
-              <div class="contact-item">Fractional People &amp; Culture executive support</div>
-              <div class="contact-item">Workforce, culture, and transformation strategy</div>
-              <div class="contact-item">Leadership, talent, and organization effectiveness consulting</div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-  </main>
+<p>
+Delana is a senior People & Culture executive and transformation leader with
+experience advising across insurance, energy, utilities, technology, and professional services.
+</p>
 
-  <footer>
-    <div class="container footer-inner">
-      <div>
-        <div class="footer-brand">Mckinsley Strategy &amp; Consulting Co.</div>
-        <div>© 2026 All rights reserved.</div>
-      </div>
+<p>
+Her expertise spans workforce strategy, organization design, leadership development,
+HR operating model modernization, and enterprise change.
+</p>
 
-      <div class="footer-links">
-        <a href="#about">About</a>
-        <a href="#services">Services</a>
-        <a href="#contact">Contact</a>
-        <a href="https://www.linkedin.com/in/delana-mckinsley-mba-52341811" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-      </div>
-    </div>
-  </footer>
+</div>
 
-  <script>
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("show");
-        }
-      });
-    }, { threshold: 0.12 });
+</div>
+</div>
+</section>
 
-    document.querySelectorAll(".reveal").forEach((el) => observer.observe(el));
-  </script>
+<section class="section" id="services">
+<div class="container">
+
+<h2 class="section-title">Services</h2>
+
+<div class="services-grid">
+
+<div class="service-card">
+<h3>Workforce Strategy</h3>
+<p>Skills architecture, workforce planning, talent strategy and capability development.</p>
+</div>
+
+<div class="service-card">
+<h3>Organization Design</h3>
+<p>Operating model redesign, governance structures and organizational effectiveness.</p>
+</div>
+
+<div class="service-card">
+<h3>Leadership & Culture</h3>
+<p>Leadership development, culture transformation and executive capability building.</p>
+</div>
+
+<div class="service-card">
+<h3>HR Transformation</h3>
+<p>HR modernization, HRIS enablement and digital people function transformation.</p>
+</div>
+
+<div class="service-card">
+<h3>Enterprise Change</h3>
+<p>Strategic change governance, adoption planning and transformation advisory.</p>
+</div>
+
+<div class="service-card">
+<h3>Fractional Executive</h3>
+<p>Fractional VP / Chief People Officer advisory and transformation leadership.</p>
+</div>
+
+</div>
+</div>
+</section>
+
+<section class="section why">
+
+<div class="container">
+
+<h2 class="section-title">Why Clients Engage Us</h2>
+
+<div class="why-grid">
+
+<div class="why-card">
+<h4>Executive Experience</h4>
+<p>Senior leadership perspective grounded in real operating environments.</p>
+</div>
+
+<div class="why-card">
+<h4>Strategic Clarity</h4>
+<p>Practical strategies that move beyond theory and deliver results.</p>
+</div>
+
+<div class="why-card">
+<h4>Cross-Industry Insight</h4>
+<p>Experience across regulated and complex industries.</p>
+</div>
+
+<div class="why-card">
+<h4>Trusted Advisory</h4>
+<p>A collaborative partner to CEOs, executives, and leadership teams.</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="section" id="contact">
+
+<div class="container">
+
+<h2 class="section-title">Contact</h2>
+
+<div class="contact-grid">
+
+<div class="contact-card">
+
+<h3>Mckinsley Strategy & Consulting Co.</h3>
+
+<p><strong>Location:</strong> Calgary, Alberta</p>
+<p><strong>Founder:</strong> Delana McKinsley</p>
+
+<p>
+<strong>LinkedIn:</strong><br>
+<a href="https://www.linkedin.com/in/delana-mckinsley-mba-52341811">
+linkedin.com/in/delana-mckinsley-mba-52341811
+</a>
+</p>
+
+</div>
+
+<div class="contact-card">
+
+<h3>How We Help</h3>
+
+<p>Executive advisory engagements</p>
+<p>Fractional People & Culture leadership</p>
+<p>Workforce strategy consulting</p>
+<p>Organizational transformation advisory</p>
+
+</div>
+
+</div>
+</div>
+</section>
+
+<footer>
+
+<div class="container footer-inner">
+
+<div class="footer-brand">
+Mckinsley Strategy & Consulting Co.
+</div>
+
+<div>
+© 2026 All rights reserved
+</div>
+
+</div>
+
+</footer>
 
 </body>
 </html>
